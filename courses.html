@@ -3,25 +3,146 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Courses</title>
-        <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
-        <link rel ="icon"type="image/png" href="Photos/logo New.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Our Courses</title>
+        <link rel="stylesheet" href="styles-courses.css">
     </head>
     <body>
-        <div class="container mt-5">
-            <h1>Our Courses</h1>
-            <p>We offer various courses to help individuals build careers in technology.</p>
-            <ul>
-                <li>📖 Blogging & Content Creation</li>
-                <li>💻 Web Development</li>
-                <li>📊 Data Science & Analytics</li>
-                <li>🛍️ Digital Marketing</li>
-                <li>🎨 Graphic Design</li>
-            </ul>
-            <a href="/enroll" class="btn btn-orange">Enroll Now</a>
+        <div class ="header">   
+            <p>Your Journey To Greatness Begins Today!</p>
+            <h3>All Our Courses Are Free</h3>
+         
+
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body> 
-</html>    
+        <div class="courses-layout">
+            <div class="course-list">
+                <h2>Our Courses</h2>
+                <div class="course-item" onclick="showCourse('Blogging')">Blogging & Content Creation</div>
+                <div class="course-item" onclick="showCourse('Web')">Web Development</div>
+                <div class="course-item" onclick="showCourse('Data')">Data Science & Analytics</div>
+                <div class="course-item" onclick="showCourse('Digital')">Digital Marketing</div>
+                <div class="course-item" onclick="showCourse('Design')">Graphic Design</div>
+                <div class="course-item" onclick="showCourse('Cyber')">Cybersecurity</div>
+                <div class="course-item" onclick="showCourse('AI')">Artificial Intelligence</div>
+            </div>
+    
+            <div class="course-preview" id="preview">
+                <p>Hover over a course to learn more</p>
+            </div>
+    
+            <div class="course-details" id="details">
+                <p>Select a course to see details</p>
+            </div>
+        </div>
+    
+        <script>
+            const preview = document.getElementById('preview');
+            const details = document.getElementById('details');
+    
+            const courseInfo = {
+                Blogging: {
+                    title: 'Blogging & Content Creation',
+                    preview:'Learn to write engaging content and monetize your blog.',
+                    duration: '3 Months',
+                    startDate: 'May 1, 2025',
+                    requirements: 'Basic writing skills and creativity.'
+                },
+                Web: {
+                    title: 'Web Development',
+                    preview: 'Build dynamic websites using HTML, CSS, and JavaScript.',
+                    duration: '4 Months',
+                    startDate: 'June 1, 2025',
+                    requirements: 'No prior experience needed.'
+                },
+                Data: {
+                    title: 'Data Science & Analytics',
+                    preview: 'Analyze data and make data-driven decisions.',
+                    duration: '6 Months',
+                    startDate: 'July 1, 2025',
+                    requirements: 'Basic math and computer skills.'
+                },
+                Digital: {
+                    title: 'Digital Marketing',
+                    preview: 'Promote brands using digital platforms and analytics.',
+                    duration: '3 Months',
+                    startDate: 'May 15, 2025',
+                    requirements: 'Basic computer knowledge.'
+                },
+                Design: {
+                    title: 'Graphic Design',
+                    preview: 'Create stunning visuals using design tools.',
+                    duration: '4 Months',
+                    startDate: 'June 10, 2025',
+                    requirements: 'Creativity and interest in art.'
+                },
+                Cyber: {
+                    title: 'Cybersecurity',
+                    preview: 'Learn to protect digital systems and data.',
+                    duration: '6 Months',
+                    startDate: 'July 5, 2025',
+                    requirements: 'Interest in IT and security.'
+                },
+                AI: {
+                    title: 'Artificial Intelligence',
+                    preview: 'Understand and build smart systems and models.',
+                    duration: '6 Months',
+                    startDate: 'August 1, 2025',
+                    requirements: 'Logical thinking and math background.'
+                }
+            };
+    
+            function showCourse(key) {
+                const course = courseInfo[key];
+                preview.innerHTML = `<div><h3>${course.title}</h3><p>${course.preview}</p></div>`;
+                details.innerHTML = `
+                    <h3>${course.title}</h3>
+                    <p><strong>Duration:</strong> ${course.duration}</p>
+                    <p><strong>Start Date:</strong> ${course.startDate}</p>
+                    <p><strong>Requirements:</strong> ${course.requirements}</p>
+                    <a href="https://forms.gle/hHEv7kxbasPtgjDs5" class="btn-link">Apply Now</a>
+                    <a href="login.html" class="btn-link" style="margin-left: 10px;">Enroll Now</a>
+                `;
+            }
+        </script>
+         <div class="call-to-action">
+            <h3>Ready to Start Your Journey?</h3>
+            <p>Join us today and become part of the change. We believe in your potential!</p>
+            <a href="login.html" class="btn-login">Sign Up Now</a>
+        </div>
+    
+    </body>
+    <footer>
+        <h1>Primetech Foundation</h1>      
+            <div class="footer-flex">
+              <div class="footer-section footer-links">
+                <h3>Links</h3>
+                <a href="Index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="patnership.html">Partner with us</a>
+                <a href="contact.html">Contact</a>
+              </div>
+          
+              <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="icons/fb.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/x.png" alt="Twitter"></a>
+                <a href="#"><img src="icons/Ig.png" alt="Instagram"></a>
+                <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="icons/Youtube.png" alt="YouTube"></a>
+              </div>
+          
+              <div class="footer-section Overview">
+                <h3>Overview</h3>
+                <h2>Legal Status: Non-Profit Organization</h2>  
+                <h2>Location: Nakuru East</h2>
+                <h2>Training Duration: Six months per cohort</h2>
+                <h2>Training Capacity: 100-200 youths per cohort</h2>
+              </div>
+            </div>
+          
+            <p>© 2025 Primetech Foundation. All rights reserved.</p>
+                   
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>
+
