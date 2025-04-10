@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login / Sign-Up</title>
+        <link rel="stylesheet" href="stylesforlogin.css"> <!-- Link to your CSS file -->
+    </head>
+    <body>
+        <div class="auth-form">
+         
+    
+            <div class="auth-wrapper">
+                <div class="form-slider" id="form-slider">
+              
+                  <!-- Login Form -->
+                  <div class="form-panel">
+                    <h1>Primetech Foundation</h1>              
+                    <h2>Login to your Account</h2>
+                    <form action="/login" method="POST">
+                      <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                      </div>
+                      <button type="submit" class="btn btn-orange">Login</button>
+                    </form>
+                  </div>
+              
+                  <!-- Sign-Up Form -->
+                  <div class="form-panel">
+                    <h1>Primetech Foundation</h1>
+                    <h2>Create Your Account</h2>
+                    <h2>Sign Up</h2>
+                    <form action="/signup" method="POST">
+                      <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="signup-phone">Phone Number</label>
+                        <input type="phone number" id="signup-phone" name="Phone Number" placeholder="Enter your Phone Number" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                      </div>
+                      <button type="submit" class="btn btn-orange">Sign Up</button>
+                    </form>
+                  </div>
+              
+                </div>
+              
+                <!-- Toggle Buttons -->
+                <div class="toggle-buttons">
+                  <button id="show-login" class="btn btn-orange active">Login</button>
+                  <button id="show-signup" class="btn btn-orange">Sign Up</button>
+                </div>
+            </div>
+              
+                 <!--JavaScript for the form-->
+            <script>
+                const slider = document.getElementById("form-slider");
+                const loginBtn = document.getElementById("show-login");
+                const signupBtn = document.getElementById("show-signup");
+              
+                loginBtn.addEventListener("click", () => {
+                  slider.style.transform = "translateX(0%)";
+                  loginBtn.classList.add("active");
+                  signupBtn.classList.remove("active");
+                });
+              
+                signupBtn.addEventListener("click", () => {
+                  slider.style.transform = "translateX(-50%)";
+                  signupBtn.classList.add("active");
+                  loginBtn.classList.remove("active");
+                });
+            </script>
+              
+    </body>
+
+</html>
