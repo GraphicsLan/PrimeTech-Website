@@ -1,22 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Primetech Foundation</title>
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/patnership.css">
+    <link rel ="icon"type="image/png" href="Photos/logo New.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Explore Courses</a></li>
+                    <li><a href="patnership.html">Partner with us</a></li>
+                    <li><a href="contact.html" class="active">Contact us</a></li>
+                    <li class="nav-item2">
+                        <a class="btn-login" href="login.html">Login/Sign up</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>>
 
-<div class="container mt-5">
-    <h1>Contact Us</h1>
-    <p>Have questions? Reach out to us!</p>
-    <form action="/contact" method="POST">
-        <div class="mb-3">
-            <label>Name:</label>
-            <input type="text" class="form-control" name="name" required>
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch With Us</h1>
+            <p>We would love to hear from you! Reach out with questions, partnership inquiries, or to learn more about our programs.</p>
         </div>
-        <div class="mb-3">
-            <label>Email:</label>
-            <input type="email" class="form-control" name="email" required>
-        </div>
-        <div class="mb-3">
-            <label>Message:</label>
-            <textarea class="form-control" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-orange">Send Message</button>
-    </form>
-</div>
+    </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Feel free to reach out through any of these channels:</p>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Our HQ is located in Kenya<br>Nakuru City</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@primetechfoundation.org<br>support@primetechfoundation.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+254 794 206 054<br>Mon-Fri, 8am-5pm EST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="x"><i class="fab fa-x"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject*</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="course">Course Information</option>
+                                <option value="donation">Donation Inquiry</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="feedback">Feedback/Suggestions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message*</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group terms">
+                            <label>
+                                <input type="checkbox" name="agreeTerms" required>
+                                I agree to <a href="#">privacy policy</a> and <a href="#">terms of communication</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-map">
+        <div class="container">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <!-- location map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1629.7366293139842!2d36.08989764405086!3d-0.2845856830212506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1747806515096!5m2!1sen!2ske" width="600" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Frequently asked quetion section-->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I support Primetech Foundation's work?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>There are several ways to support us: financial donations, in-kind contributions of technology equipment, volunteering your time and expertise, or becoming a corporate partner. Visit our "Partner" page for more details.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What are your operating hours?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our office is open Monday through Friday from 9:00 AM to 5:00 PM EST. For programs and courses, we often have evening and weekend sessions available.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I apply for your training programs?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can apply directly through our website on the "Courses" page. Select your desired program and complete the application form. Our team will review your application and contact you within 5 business days.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer scholarships or financial aid?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer need-based scholarships for many of our programs. Please indicate your interest in financial assistance when completing your application, and our team will provide you with more information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can my company partner with Primetech Foundation?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer various corporate partnership opportunities including sponsorships, employee volunteer programs, and technology donations. Please select "Partnership Opportunity" as your subject when contacting us, or visit our "Partner" page for more information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Where can I see upcoming events?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All upcoming events are listed on our website's patnership page. You can also subscribe to our newsletter to receive regular updates about events and programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Primetech Foundation</h3>
+                    <p>Committed to bridging the digital divide and empowering communities through technology and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html"> Our Courses</a></li>
+                        <li><a href="patnership.html">Partner with us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>info@primetechfoundation.org</p>
+                    <p>+254 794 206054</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-x"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©2025 Primetech Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contactSuccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-check-circle"></i>
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully.</p>
+            <p>Our team will get back to you within 3 business days.</p>
+            <button class="btn close-modal-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/patnership.js"></script>
+</body>
+</html>

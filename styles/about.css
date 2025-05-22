@@ -1,9 +1,8 @@
-/* Stylesforabout.css */
 body {
-    font-family: open sans sans-serif;
+    font-family: open sans, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #f5f5f2;
     color: #191224;
 }
 
@@ -12,7 +11,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 10%;
+    padding: 200px 10%;
     background-color: #191224;
     color: #f5f5f2;
 }
@@ -25,47 +24,52 @@ body {
 .story-text h1 {
     color: #F7941D;
     margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.story-text p {
+    font-size: 1.5rem;
 }
 
 .story-image {
     flex: 1;
-    max-width: 300px;
+    max-width: 550px;
     width: 100%;
     border-radius: 10px;
 }
 
+/* Mission Vision Styling */
 .mission-vision-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #f0f0f0;
-    padding: 60px 10%;
+    padding: 90px 10%;
     gap: 20px;
 }
 
 .mission, .vision {
-    flex: 1 1 45%; /* Adjust the width as needed */
+    flex: 1 1 45%;
     margin-bottom: 30px;
     background: #191224;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     text-align: center;
-    
-}   
+    color: #f5f5f2;
+}
 
 .mission h1, .vision h1 {
     color: #F7941D;
     margin-bottom: 15px;
 }
 
-.mission, .vision{
-    color: #f5f5f2;
-}
 /* Objectives Section */
 .objectives-container {
     background-color: #191224;
-    padding: 60px 10%;
+    padding: 100px 10%;
     border-top: 1px solid #F7941D;
 }
 
@@ -80,7 +84,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     list-style: none;
-    padding: 0;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -92,45 +96,52 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-  /* Team Section */
+/* Team Section */
 .team-container {
     background-color: #f8f9fa;
     padding: 60px 10%;
     text-align: center;
-    display: flex; /* Enables flexbox */
-    flex-wrap: wrap; /* Allows wrapping to the next row if needed */
-    justify-content: space-between; /* Distributes items evenly with space between */
-    gap: 20px; /* Adds spacing between team members */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .team-member {
-    flex: 1 1 calc(33.33% - 20px); /* Ensures each team member takes up 1/3 of the row, minus the gap */
+    flex: 1 1 calc(33.33% - 20px);
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     display: flex;
-    flex-direction: column; /* Stacks content vertically inside each team member */
-    align-items: center; /* Centers content horizontally */
-    text-align: center; /* Centers text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .team-member img {
-    width: 100%;
-    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
     margin-bottom: 15px;
+    border-bottom: #191224 5px solid;
+    object-fit: cover;
+    object-position: center;
+    background: #f5f5f2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
-.Heading h1{
+
+.Heading h1 {
     font-size: 2.5rem;
     color: #F7941D;
     margin-bottom: 20px;
     text-align: center;
     padding: 20px;
 }
-/* Contact Section */
 
+/* Contact Section */
 .contact-container {
-    padding: 60px 10%;
+    padding: 100px 10%;
     text-align: center;
     background-color: #fff;
 }
@@ -154,36 +165,89 @@ body {
     margin-bottom: 30px;
     text-align: center;
 }
-/* Footer Section */
 
-.footer {
-    background-color: #191224;
+/* Back to Top Arrow Styles */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 999;
+    font-size: 2rem;
+    background: #F7941D;
     color: #fff;
-    text-align: center;
-    padding: 30px 10%;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+#backToTop:hover {
+    background: #191224;
+    transform: scale(1.1);
 }
 
-.footer .btn-login {
-    background-color: #F7941D;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 10px;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .our-story-container, .mission-vision-container {
+    .our-story-container,
+    .mission-vision-container {
         flex-direction: column;
     }
 
-    .story-text, .story-image, .mission, .vision {
+    .story-text,
+    .story-image,
+    .mission,
+    .vision {
         padding: 0;
     }
 
     .story-image {
         margin-top: 20px;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .our-story-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-text {
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color:none;
+        padding: 1rem;
+    }
+
+    nav ul.show-mobile-menu {
+        display: flex;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
     }
 }

@@ -1,148 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Our Courses</title>
-        <link rel="stylesheet" href="styles-courses.css">
-    </head>
-    <body>
-        <div class ="header">   
-            <p>Your Journey To Greatness Begins Today!</p>
-            <h3>All Our Courses Are Free</h3>
-         
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses | Primetech Foundation</title>
+    <link rel="stylesheet" href="styles/courses.css">
+    <link rel="stylesheet" href="styles/patnership.css">
+    <link rel ="icon"type="image/png" href="Photos/logo New.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html"class="active">Explore Courses</a></li>
+                    <li><a href="patnership.html"> Partner with us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li class="nav-item2">
+                        <a class="btn-login" href="login.html">Login/Sign up</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="courses-hero">
+        <div class="container">
+            <h1>Empower Your Future with Our Courses</h1>
+            <p>Gain in-demand skills and knowledge through our comprehensive training programs designed for the digital age.</p>
+            <a href="#course-application" class="btn">Apply Now</a>
+        </div>
+    </section>
+    <!-- Courses-->
+    <section id="courses-list" class="courses-list">
+        <div class="container">
+            <div class="course-title">
+            <h2>Our Course Offerings</h2>
+            <p>Browse through our diverse range of courses and find the perfect fit for your career goals.</p>
+            </div>
+            <div class="course-categories">
+                <button class="category-btn active" data-category="all">All Courses</button>
+                <button class="category-btn" data-category="tech">Technology</button>
+                <button class="category-btn" data-category="business">Business</button>
+                <button class="category-btn" data-category="creative">Creative</button>
+                <button class="category-btn" data-category="professional">Professional</button>
+            </div>
+            
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card" data-category="tech">
+                    <div class="course-image">
+                        <img src="Photos/web.jpeg" alt="Web Development">
+                        <span class="category-badge">Technology</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Web Development Fundamentals</h3>
+                        <p class="course-description">Learn to build responsive websites using HTML, CSS, and JavaScript.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 8 Weeks</span>
+                            <span><i class="fas fa-user-graduate"></i> Beginner </span>
+                        </div>
+                        <button class="btn-outline view-details-btn" data-course="web-development">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card" data-category="tech">
+                    <div class="course-image">
+                        <img src="Photos/Data science image.jpeg" alt="Data Science">
+                        <span class="category-badge">Technology</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Data Science Essentials</h3>
+                        <p class="course-description">Introduction to data analysis, visualization, and machine learning concepts.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 12 Weeks</span>
+                            <span><i class="fas fa-user-graduate"></i> Intermediate</span>
+                        </div>
+                        <button class="btn-outline view-details-btn" data-course="data-science">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card" data-category="business">
+                    <div class="course-image">
+                        <img src="Photos/dmarketing.jpeg" alt="Digital Marketing">
+                        <span class="category-badge">Business</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Digital Marketing Strategy</h3>
+                        <p class="course-description">Master SEO, social media, email marketing, and content strategy.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 6 Weeks</span>
+                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
+                        </div>
+                        <button class="btn-outline view-details-btn" data-course="digital-marketing">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="course-card" data-category="Technology">
+                    <div class="course-image">
+                        <img src="Photos/python programming.jpeg" alt="Python Programming">
+                        <span class="category-badge">Technology</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Python Programing </h3>
+                        <p class="course-description">Learn introduction into python programming and unlock a wide range of python applications and fields.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 8 Weeks</span>
+                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
+                        </div>
+                        <button class="btn-outline view-details-btn" data-course="Python Programming">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 5 -->
+                <div class="course-card" data-category="creative">
+                    <div class="course-image">
+                        <img src="Photos/Design 01.jpg" alt="Graphic Design">
+                        <span class="category-badge">Creative</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Graphic Design Fundamentals</h3>
+                        <p class="course-description">Develop visual communication skills using industry-standard tools.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 8 Weeks</span>
+                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
+                        </div>
+                        <button class="btn-outline view-details-btn" data-course="graphic-design">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Course 6 -->
+                <div class="course-card" data-category="tech">
+                    <div class="course-image">
+                        <img src="Photos/Ai image.jpeg" alt="Artificial Intelligence">
+                        <span class="category-badge">Technology</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Artificial Intelligence</h3>
+                        <p class="course-description">Dive into the world of Artificial Intelligence.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 6 Weeks</span>
+                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
+                        </div>
+                        <button class="btn-outline view-details-btn" data-course="Artificial Intelligence">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+              <!--More details section-->
+    <section class="course-details-section">
+        <div class="container">
+            <div class="course-details-container">
+                <div class="course-details-header">
+                    <h2 id="detail-course-title">Course Details</h2>
+                    <p>Select a course to view detailed information</p>
+                </div>
+                <div class="course-details-content" id="course-details-content">
+                    <div class="no-course-selected">
+                        <i class="fas fa-book-open"></i>
+                        <p>Please select a course to view its details, requirements, and duration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!--Course application Form-->
+    <section id="course-application" class="course-application">
+        <div class="container">
+            <h2>Course Application Form</h2>
+            <p class="subtitle">Fill out the form below to register for your selected course</p>
+            
+            <form id="courseApplicationForm">
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-group">
+                        <label for="applicantName">Full Name*</label>
+                        <input type="text" id="applicantName" name="applicantName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantEmail">Email*</label>
+                        <input type="email" id="applicantEmail" name="applicantEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantPhone">Phone Number*</label>
+                        <input type="tel" id="applicantPhone" name="applicantPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantDob">Date of Birth</label>
+                        <input type="date" id="applicantDob" name="applicantDob">
+                    </div>
+                </div>
 
+                <div class="form-section">
+                    <h3>Course Information</h3>
+                    <div class="form-group">
+                        <label for="selectedCourse">Selected Course*</label>
+                        <input type="text" id="selectedCourse" name="selectedCourse" required readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="courseSchedule">Preferred Schedule*</label>
+                        <select id="courseSchedule" name="courseSchedule" required>
+                            <option value="">Select Schedule</option>
+                            <option value="weekday-morning">Weekday Morning (9am-12pm)</option>
+                            <option value="weekday-evening">Weekday Evening (6pm-9pm)</option>
+                            <option value="weekend">Weekend (10am-4pm)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Preferred Start Date*</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Education & Experience</h3>
+                    <div class="form-group">
+                        <label for="educationLevel">Highest Education Level*</label>
+                        <select id="educationLevel" name="educationLevel" required>
+                            <option value="">Select Education Level</option>
+                            <option value="high-school">High School</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Relevant Experience (if any)</label>
+                        <textarea id="experience" name="experience" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivation">Why are you interested in this course?*</label>
+                        <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group terms">
+                    <label>
+                        <input type="checkbox" name="agreeTerms" required>
+                        <P>I agree to the <a href="#">Terms and Conditions</a> and understand that my data
+                         will be processed in accordance with Primetech Foundation's <a href="#">Privacy Policy</a>.</p>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
         </div>
-        <div class="courses-layout">
-            <div class="course-list">
-                <h2>Our Courses</h2>
-                <div class="course-item" onclick="showCourse('Blogging')">Blogging & Content Creation</div>
-                <div class="course-item" onclick="showCourse('Web')">Web Development</div>
-                <div class="course-item" onclick="showCourse('Data')">Data Science & Analytics</div>
-                <div class="course-item" onclick="showCourse('Digital')">Digital Marketing</div>
-                <div class="course-item" onclick="showCourse('Design')">Graphic Design</div>
-                <div class="course-item" onclick="showCourse('Cyber')">Cybersecurity</div>
-                <div class="course-item" onclick="showCourse('AI')">Artificial Intelligence</div>
-            </div>
-    
-            <div class="course-preview" id="preview">
-                <p>Hover over a course to learn more</p>
-            </div>
-    
-            <div class="course-details" id="details">
-                <p>Select a course to see details</p>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The Web Development course transformed my career. I went from zero coding experience to building my first Website for my business!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="student1.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h4>Daniel Kim</h4>
+                            <span>Web Development Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Being a student at primetech has been a life altering opportunity. I was blown away by the quality of the courses provided. 
+                            The instructors are knowledgeable and engaging, and the material is presented in a clear and concise manner</p>
+                        <p>I also had the opportunity to engage with like minded people and be exposed to a world full of possibilities.</p>    
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="student2.jpg" alt="Michael Chen">
+                        <div>
+                            <h4>Prudence Kirimi</h4>
+                            <span>Data Science Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The instructors were knowledgeable and supportive. The project-based learning approach helped me build a strong portfolio.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="student3.jpg" alt="Amina Diallo">
+                        <div>
+                            <h4>Dan Kariuki</h4>
+                            <span>Graphic Design Student</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <script>
-            const preview = document.getElementById('preview');
-            const details = document.getElementById('details');
-    
-            const courseInfo = {
-                Blogging: {
-                    title: 'Blogging & Content Creation',
-                    preview:'Learn to write engaging content and monetize your blog.',
-                    duration: '3 Months',
-                    startDate: 'May 1, 2025',
-                    requirements: 'Basic writing skills and creativity.'
-                },
-                Web: {
-                    title: 'Web Development',
-                    preview: 'Build dynamic websites using HTML, CSS, and JavaScript.',
-                    duration: '4 Months',
-                    startDate: 'June 1, 2025',
-                    requirements: 'No prior experience needed.'
-                },
-                Data: {
-                    title: 'Data Science & Analytics',
-                    preview: 'Analyze data and make data-driven decisions.',
-                    duration: '6 Months',
-                    startDate: 'July 1, 2025',
-                    requirements: 'Basic math and computer skills.'
-                },
-                Digital: {
-                    title: 'Digital Marketing',
-                    preview: 'Promote brands using digital platforms and analytics.',
-                    duration: '3 Months',
-                    startDate: 'May 15, 2025',
-                    requirements: 'Basic computer knowledge.'
-                },
-                Design: {
-                    title: 'Graphic Design',
-                    preview: 'Create stunning visuals using design tools.',
-                    duration: '4 Months',
-                    startDate: 'June 10, 2025',
-                    requirements: 'Creativity and interest in art.'
-                },
-                Cyber: {
-                    title: 'Cybersecurity',
-                    preview: 'Learn to protect digital systems and data.',
-                    duration: '6 Months',
-                    startDate: 'July 5, 2025',
-                    requirements: 'Interest in IT and security.'
-                },
-                AI: {
-                    title: 'Artificial Intelligence',
-                    preview: 'Understand and build smart systems and models.',
-                    duration: '6 Months',
-                    startDate: 'August 1, 2025',
-                    requirements: 'Logical thinking and math background.'
-                }
-            };
-    
-            function showCourse(key) {
-                const course = courseInfo[key];
-                preview.innerHTML = `<div><h3>${course.title}</h3><p>${course.preview}</p></div>`;
-                details.innerHTML = `
-                    <h3>${course.title}</h3>
-                    <p><strong>Duration:</strong> ${course.duration}</p>
-                    <p><strong>Start Date:</strong> ${course.startDate}</p>
-                    <p><strong>Requirements:</strong> ${course.requirements}</p>
-                    <a href="https://forms.gle/hHEv7kxbasPtgjDs5" class="btn-link">Apply Now</a>
-                    <a href="login.html" class="btn-link" style="margin-left: 10px;">Enroll Now</a>
-                `;
-            }
-        </script>
-         <div class="call-to-action">
-            <h3>Ready to Start Your Journey?</h3>
-            <p>Join us today and become part of the change. We believe in your potential!</p>
-            <a href="login.html" class="btn-login">Sign Up Now</a>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Career?</h2>
+            <p>Take the first step towards your future today. Our admissions team is ready to help you choose the perfect course.</p>
+            <div class="cta-buttons">
+                <a href="#course-application" class="btn">Apply Now</a>
+                <a href="contact.html" class="btn-outline">Contact Advisor</a>
+            </div>
         </div>
-    
-    </body>
+    </section>
+
     <footer>
-        <h1>Primetech Foundation</h1>      
-            <div class="footer-flex">
-              <div class="footer-section footer-links">
-                <h3>Links</h3>
-                <a href="Index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="courses.html">Courses</a>
-                <a href="patnership.html">Partner with us</a>
-                <a href="contact.html">Contact</a>
-              </div>
-          
-              <div class="footer-section social-media">
-                <h3>Follow Us</h3>
-                <a href="#"><img src="icons/fb.png" alt="Facebook"></a>
-                <a href="#"><img src="icons/x.png" alt="Twitter"></a>
-                <a href="#"><img src="icons/Ig.png" alt="Instagram"></a>
-                <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-                <a href="#"><img src="icons/Youtube.png" alt="YouTube"></a>
-              </div>
-          
-              <div class="footer-section Overview">
-                <h3>Overview</h3>
-                <h2>Legal Status: Non-Profit Organization</h2>  
-                <h2>Location: Nakuru East</h2>
-                <h2>Training Duration: Six months per cohort</h2>
-                <h2>Training Capacity: 100-200 youths per cohort</h2>
-              </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Primetech Foundation</h3>
+                    <p>Committed to bridging the digital divide and empowering communities through technology and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="patnership.html">Partner With Us</a></li>
+                        <li><a href="login.html">Join US Today</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>info@primetechfoundation.org</p>
+                    <p>+254 794 206054</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-x"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                       <!-- <a href="#"><i class="fab fa-youtube"></i></a>-->
+                    </div>
+                </div>
             </div>
-          
-            <p>© 2025 Primetech Foundation. All rights reserved.</p>
-                   
+            <div class="footer-bottom">
+                <p>©2025 Primetech Foundation. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</html>
 
+    <div id="courseSuccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-check-circle"></i>
+            <h2>Application Submitted successfully!</h2>
+            <p>Thank you for applying to our course. Your application has been received.</p>
+            <p>Our admissions team will review your information and contact you within 3 business days.</p>
+            <button class="btn close-modal-btn">Close</button>
+        </div>
+    </div>
+    <script src="scripts/courses.js"></script>
+    <script src="scripts/patnership.js"></script>
+</body>
+</html>

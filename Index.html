@@ -1,69 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Primetech Foundation</title>
-        <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
-        <link rel ="icon"type="image/png" href="Photos/logo New.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-    
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navigation-bar">
-            <div class="container-fluid">
-                   <!-- Logo section -->
-            <a class="navbar-brand" href="Index.html">
-                <img src="Photos/logo New.png" alt="Primetech logo" height="60">
-            </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!--navigation bar-->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="Index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="patnership.html">Partner with us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item">
-                            <a class="btn-login" href="login.html">Login/Sign up</a>
-                        </li>
-                    </ul>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primetech Foundation</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/patnership.css">
+    <link rel="icon" type="image/png" href="Photos/logo New.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
             </div>
-        </nav>
-        
-    
-        <!-- Hero Section -->
-       
+            <nav>
+                <ul>
+                    <li><a href="Index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Explore Courses</a></li>
+                    <li><a href="patnership.html">Partner with us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li class="nav-item2">
+                        <a class="btn-login" href="login.html">Login/Sign up</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+                <span class="control-next-icon"></span>
             </button>
-            
-    
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <div class="hero-slide" style="background-image: url('Photos/lines\ of\ code.jpeg');">
+                <div class="hero-slide" style="background-image: url('Photos/lines of code.jpeg');">
                     <div class="hero-content text-center text-white">
                         <h1 class="display-4 fw-bold">PrimeTech Foundation</h1>
-                        <h2 class="display-4 fw-bold">Empowering  Youth Through Technology</h2>
+                        <h2 class="display-4 fw-bold">Empowering Youth Through Technology</h2>
                         <p class="lead">Join our free courses and build a career in tech</p>
-                        <a href="courses.html" class="btn-click">Get Started</a>
+                        <a href="login.html" class="btn-click">Get Started</a>
                     </div>
                 </div>
             </div>
-    
             <!-- Slide 2 -->
             <div class="carousel-item">
-                <div class="hero-slide" style="background-image: url('Photos/seo\ image.jpeg');">
+                <div class="hero-slide" style="background-image: url('Photos/seo image.jpeg');">
                     <div class="hero-content text-center text-white">
                         <h1 class="display-4 fw-bold">Learn. Build. Grow.</h1>
                         <p class="lead">Hands-on training with real-world projects</p>
@@ -71,174 +64,213 @@
                     </div>
                 </div>
             </div>
-    
             <!-- Slide 3 -->
             <div class="carousel-item">
-                <div class="hero-slide" style="background-image: url('Photos/hacker\ Image.jpeg');">
+                <div class="hero-slide" style="background-image: url('Photos/hacker Image.jpeg');">
                     <div class="hero-content text-center text-white">
                         <h1 class="display-4 fw-bold">Your Tech Journey Starts Here</h1>
                         <p class="lead">No experience needed.</p>
-                        <a href="login.html" class="btn-click">Enroll Now</a>
+                        <a href="courses.html" class="btn-click">Enroll Now</a>
                     </div>
                 </div>
             </div>
-    
         </div>
     </div>
-    
-    
-        <!-- Features Section -->
-        <div class="features">
-            <h2>Why Choose Us?</h2>
-            <p>We provide accessible and practical courses designed to empower young people and communities <br> to thrive through technology.</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="Photos/Free.jpeg" alt="lines of code">
-                        <h4>Free Courses</h4>
-                        <p>Learn various tech skills at no cost with our structured learning path.</p>
-                    </div>
+
+    <!-- Why us section (Hero Page) -->
+    <section class="why-choose-us">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <p>Here is what sets Primetech Foundation apart.</p>
+        </div>
+        <div class="reasons">
+            <div class="reason-card" data-index="01">
+                <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h3>Innovative Solutions</h3>
+                <p>We provide creative and modern tech-based solutions that make lasting impact.</p>
+            </div>
+            <div class="reason-card" data-index="02">
+                <div class="icon"><i class="fas fa-handshake"></i></div>
+                <h3>Strong Partnerships</h3>
+                <p>We collaborate with organizations and individuals to achieve mutual goals.</p>
+            </div>
+            <div class="reason-card" data-index="03">
+                <div class="icon"><i class='bx bx-group'></i></div>
+                <h3>Community Focused</h3>
+                <p>We are deeply rooted in community development and empowerment.</p>
+            </div>
+            <div class="reason-card" data-index="04">
+                <div class="icon"><i class='bx  bx-rocket'></i> </div>
+                <h3>Youth Empowerment</h3>
+                <p>Our programs uplift and empower young people with digital skills.</p>
+            </div>
+            <div class="reason-card" data-index="05">
+                <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                <h3>Integrity & Transparency</h3>
+                <p>We uphold high ethical standards in every aspect of our operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services container my-5">
+        <div class="section-header text-center">
+            <h2 class="fw-bold">Our Services</h2>
+            <p>We offer innovative digital services to empower schools, businesses, and communities.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 service-item">
+                <div class="service-card">
+                    <!--<img src="icons/design.png" alt="Graphic Design" />-->
+                    <h4>Graphic Design & Branding</h4>
+                    <p>Professional designs for logos, posters, business cards, and more.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="Photos/Expert.jpeg" alt="Mentorship">
-                        <h4>Expert Mentorship</h4>
-                        <p>Get personalized guidance from industry experts to enhance your learning.</p>
-                    </div>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-card">
+                   <!---- <img src="icons/training.png" alt="Digital Training" /> -->
+                    <h4>Digital Training for Teachers</h4>
+                    <p>Empowering educators with essential ICT skills and digital literacy.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-item">
-                        <img src="Photos/Job rediness.jpeg" alt="Job Opportunities">
-                        <h4>Job Opportunities</h4>
-                        <p>Access exclusive job placement programs after completing our courses.</p>
-                    </div>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-card">
+                    <!--<img src="icons/cv.png" alt="CV Writing" />-->
+                    <h4>CV & Cover Letter Writing</h4>
+                    <p>Polished CVs and cover letters tailored to your career goals.</p>
+                </div>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-card">
+                   <!--<img src="icons/certificate.png" alt="Certificate Processing" />-->
+                    <h4>Mass Certificate Processing</h4>
+                    <p>Batch generation for workshops, conferences, schools, and seminars.</p>
+                </div>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-card">
+                   <!-- <img src="icons/web.png" alt="Web Development" />-->
+                    <h4>Web & System Development</h4>
+                    <p>Custom websites and software systems tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-card">
+                   <!-- <img src="icons/tech-training.png" alt="Tech Integration" /> -->
+                    <h4>SME & Local Business Training</h4>
+                    <p>Helping small businesses adopt digital tools and technology.</p>
                 </div>
             </div>
         </div>
-    
-        <!-- Popular Courses Section -->
-        <div class="courses">
-            <h2>Popular Courses</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <img src="Photos/Ai image.jpeg" alt="Artificial Intelligence">
-                        <strong><h4>Artificial Intelligence</h4></strong>
-                        <p>Dive into the world of Artificial Intelligence with our cutting-edge course!<br>
-                        Learn machine learning, neural networks, and AI tools to build smart systems that think, predict, and automate. <br>
-                       
-    
-                            <strong> Hands-on Projects<br>
-                             Industry-Ready Skills<br>
-                             Globally Recognized Certification<br>
-                            
-                            Enroll Now & Be the AI Innovator of Tomorrow! </p></strong>
-                    </div>
+        <div class="text-center mt-4">
+           
+           <a href="#" class="btn-contact" onclick="redirectToWhatsApp()">Request a Service on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <div class="courses">
+        <h2>Popular Courses</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="course-item">
+                    <img src="Photos/Ai image.jpeg" alt="Artificial Intelligence">
+                    <h4><strong>Artificial Intelligence</strong></h4>
+                    <p>
+                        Dive into the world of Artificial Intelligence with our <br>cutting-edge course!.
+                        Learn machine learning, neural networks, and AI tools to build smart systems that think, predict, and automate.<br>
+                        <strong>
+                            Hands-on Projects<br>
+                            Industry-Ready Skills<br>
+                            Globally Recognized Certification<br>
+                            Enroll Now & Be the AI Innovator of Tomorrow!
+                        </strong>
+                    </p>
                 </div>
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <img src="Photos/webDevelopment.jpeg" alt="Web Development">
-                       <strong><h4>Web Development</h4></strong>
-                        <p>Turn your ideas into stunning websites with our hands-on Web Development Course!<br>
-                            Learn HTML, CSS, JavaScript, and modern frameworks to create fast, responsive, and dynamic sites.<br>
-                          
-                        <strong> Zero to Hero in Weeks! <br>
-                             Certification Included<br>
-                             100% Practical, Job-Ready Skills.</strong> </p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item">
+                    <img src="Photos/webDevelopment.jpeg" alt="Web Development">
+                    <h4><strong>Web Development</strong></h4>
+                    <p>
+                        Turn your ideas into stunning websites with our hands-on Web Development Course!<br>
+                        Learn HTML, CSS, JavaScript, and modern frameworks to create fast, responsive, and dynamic sites.<br>
+                        <strong>
+                            Zero to Hero in Weeks!<br>
+                            Certification Included<br>
+                            100% Practical, Job-Ready Skills.
+                        </strong>
+                    </p>
                 </div>
-                <div class="col-md-4">
-                    <div class="course-item">
-                        <img src="Photos/Data science image.jpeg" alt="Data science">
-                      <strong>  <h4>Data science</h4></strong>
-                        <p>Turn raw data into game-changing insights with our hands-on Data Science Course!<br> 
-                            Master Python, machine learning, and AI to analyze trends, predict outcomes, and drive smart decisions.<br>
-                            Perfect for beginners and career-changers—no prior experience needed!<br>
-    
-                        <strong> Learn from Experts <br>
-                             Build Real-World Projectsbr<br>
-                             Earn a Career-Boosting Certificate<br>                        
-                        </strong></p>
+            </div>
+            <div class="col-md-4">
+                <div class="course-item">
+                    <img src="Photos/Data science image.jpeg" alt="Data science">
+                    <h4><strong>Data Science</strong></h4>
+                    <p>
+                        Turn raw data into game-changing insights with our<br> hands-on Data Science Course!<br>
+                        Master Python, machine learning, and AI to analyze<br> trends, predict outcomes, and drive smart decisions.<br>
+                        Perfect for beginners and career-changers—no prior experience needed!<br>
+                        <strong>
+                            Learn from Experts<br>
+                            Build Real-World Projects<br>
+                            Earn a Career-Boosting Certificate.
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a href="courses.html" class="btn-view-courses">View All Courses</a>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="call-to-action">
+        <h3>Ready to Start Your Journey?</h3>
+        <p>Join us today and become part of the change. We believe in your potential!</p>
+        <a href="login.html" class="btn-view-courses">Sign Up Now, change Your Future</a>
+    </div>
+
+    <!-- Back to Top Arrow -->
+    <button id="backToTop" title="Go to top">&#8679;</button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Primetech Foundation</h3>
+                    <p>To empower youths in slum areas with digital skills, fostering self-employment and reducing unemployment.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">Mor About Us</a></li>
+                        <li><a href="patnership.html">Patner With Us</a></li>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="login.html">Join us Today</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us Today</h3>
+                    <p>info@primetechfoundation.org</p>
+                    <p>+254 794 206054</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-x"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="courses.html" class="btn-view-courses">View All Courses</a>
-        </div>
-    
-    
-        <!-- Success Stories Section -->
-        <div class="stories">
-            <h2>Success Stories</h2>
-            <p>Hear from our students who have transformed their lives through our courses.</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="story-item">
-                        <img src="https://via.placeholder.com/400x200" alt="Student 1">
-                        <h4>Jane Doe</h4>
-                        <p>"Thanks to Primetech, I learned blogging and now run my own successful blog!"</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="story-item">
-                        <img src="https://via.placeholder.com/400x200" alt="Student 2">
-                        <h4>John Smith</h4>
-                        <p>"I transitioned into web development after completing their course. Now, I have a job!"</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="story-item">
-                        <img src="https://via.placeholder.com/400x200" alt="Student 3">
-                        <h4>Michael Wilson</h4>
-                        <p>"The digital marketing course opened up so many career opportunities for me."</p>
-    
-                    </div>
-                </div>   
+            <div class="footer-bottom">
+                <p>©2025 Primetech Foundation. All rights reserved.</p>
             </div>
-            <a href="stories.html" class="btn-view-stories">View More Stories</a>
         </div>
-    
-        <!-- Call to Action Section -->
-        <div class="call-to-action">
-            <h3>Ready to Start Your Journey?</h3>
-            <p>Join us today and become part of the change. We believe in your potential!</p>
-            <a href="login.html" class="btn-login">Sign Up Now</a>
-        </div>
-    
-        <!-- Footer -->
-        <footer>
-            <h1>Primetech Foundation</h1>
-          
-            <div class="footer-flex">
-              <div class="footer-section footer-links">
-                <h3>Links</h3>
-                <a href="Index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="courses.html">Courses</a>
-                <a href="patnership.html">Partner with us</a>
-                <a href="contact.html">Contact</a>
-              </div>
-          
-              <div class="footer-section social-media">
-                <h3>Follow Us</h3>
-                <a href="#"><img src="icons/fb.png" alt="Facebook"></a>
-                <a href="#"><img src="icons/x.png" alt="Twitter"></a>
-                <a href="#"><img src="icons/Ig.png" alt="Instagram"></a>
-                <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-                <a href="#"><img src="icons/Youtube.png" alt="YouTube"></a>
-              </div>
-          
-              <div class="footer-section Overview">
-                <h3>Overview</h3>
-                <h2>Legal Status: Non-Profit Organization</h2>  
-                <h2>Location: Nakuru East</h2>
-                <h2>Training Duration: Six months per cohort</h2>
-                <h2>Training Capacity: 100-200 youths per cohort</h2>
-              </div>
-            </div>
-          
-            <p>© 2025 Primetech Foundation. All rights reserved.</p>
-        </footer>          
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    </footer>
+    <script src="scripts/patnership.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
 </html>
 

@@ -1,89 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login / Sign-Up</title>
-        <link rel="stylesheet" href="stylesforlogin.css"> <!-- Link to your CSS file -->
-    </head>
-    <body>
-        <div class="auth-form">
-         
-    
-            <div class="auth-wrapper">
-                <div class="form-slider" id="form-slider">
-              
-                  <!-- Login Form -->
-                  <div class="form-panel">
-                    <h1>Primetech Foundation</h1>              
-                    <h2>Login to your Account</h2>
-                    <form action="/login" method="POST">
-                      <div class="form-group">
-                        <label for="login-email">Email</label>
-                        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
-                      </div>
-                      <button type="submit" class="btn btn-orange">Login</button>
-                    </form>
-                  </div>
-              
-                  <!-- Sign-Up Form -->
-                  <div class="form-panel">
-                    <h1>Primetech Foundation</h1>
-                    <h2>Create Your Account</h2>
-                    <h2>Sign Up</h2>
-                    <form action="/signup" method="POST">
-                      <div class="form-group">
-                        <label for="signup-name">Full Name</label>
-                        <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="signup-email">Email</label>
-                        <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="signup-phone">Phone Number</label>
-                        <input type="phone number" id="signup-phone" name="Phone Number" placeholder="Enter your Phone Number" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="signup-password">Password</label>
-                        <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
-                      </div>
-                      <button type="submit" class="btn btn-orange">Sign Up</button>
-                    </form>
-                  </div>
-              
-                </div>
-              
-                <!-- Toggle Buttons -->
-                <div class="toggle-buttons">
-                  <button id="show-login" class="btn btn-orange active">Login</button>
-                  <button id="show-signup" class="btn btn-orange">Sign Up</button>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeTech Foundation </title>
+    <link rel ="icon"type="image/png" href="Photos/logo New.png">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/patnership.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
             </div>
-              
-                 <!--JavaScript for the form-->
-            <script>
-                const slider = document.getElementById("form-slider");
-                const loginBtn = document.getElementById("show-login");
-                const signupBtn = document.getElementById("show-signup");
-              
-                loginBtn.addEventListener("click", () => {
-                  slider.style.transform = "translateX(0%)";
-                  loginBtn.classList.add("active");
-                  signupBtn.classList.remove("active");
-                });
-              
-                signupBtn.addEventListener("click", () => {
-                  slider.style.transform = "translateX(-50%)";
-                  signupBtn.classList.add("active");
-                  loginBtn.classList.remove("active");
-                });
-            </script>
-              
-    </body>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Explore Courses</a></li>
+                    <li><a href="patnership.html" >Partner with us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li class="nav-item2">
+                        <a class="btn-login" href="login.html">Login/Sign up</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="login-container">
+        <div class="forms-container">
+            <div class="greeting">
+                <h1><strong>Welcome to PrimeTech Foundation</strong></h1>
+                <p>Join us in our mission to <br> bridge the digital divide and<br> create opportunities for all.</p>
+                <p>Sign up or log in to start your journey with us!</p>
+            </div>
 
+            <div class="form-container login-form">
+                <h2>Login to Your Account</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" required >
+                        <label for="loginEmail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" required>
+                        <label for="loginPassword">Password</label>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('loginPassword', this)"></i>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="social-login">
+                        <p>Or login with</p>
+                        <div class="social-icons">
+                            <div class="social-icon google" onclick="loginWithGoogle()">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="social-icon github" onclick="loginWithGithub()">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="social-icon facebook" onclick="loginWithFacebook()">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="switch-form">Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+                </form>
+            </div>
+
+            <div class="form-container signup-form hidden">
+                <h2>Create Your Account</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <input type="text" id="fullName" required>
+                        <label for="fullName">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phoneNumber" required>
+                        <label for="phoneNumber">Phone Number</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signupEmail" required>
+                        <label for="signupEmail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="gender" required>
+                            <option value="" disabled selected></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                        <label for="gender">Gender</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="nationality" required>
+                            <option value="" disabled selected></option>
+                            
+                        </select>
+                        <label for="nationality">Nationality</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signupPassword" required>
+                        <label for="signupPassword">Password</label>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('signupPassword', this)"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" required>
+                        <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                    <div class="social-login">
+                        <p>Or sign up with</p>
+                        <div class="social-icons">
+                            <div class="social-icon google" onclick="loginWithGoogle()">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="social-icon github" onclick="loginWithGithub()">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="social-icon facebook" onclick="loginWithFacebook()">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="switch-form">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="verification-modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Email Verification</h2>
+            <p>A verification link has been sent to your email address. Please check your inbox and click on the link to verify your account.</p>
+            <button class="btn" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="scripts/login.js"></script>
+    <script src="scripts/patnership.js"></script>
+</body>
 </html>
