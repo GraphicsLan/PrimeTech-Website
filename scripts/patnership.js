@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('nav ul');
     
-    mobileMenuBtn.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
-    });
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+        });
+    }
     
-    // Smooth scrolling for anchor links
+    // Smooth scrolling 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -39,10 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (partnerForm) {
         partnerForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Here you would typically send the form data to a server
-            // For demonstration, we'll just show the success modal
-            
+
             // Get form data
             const formData = new FormData(partnerForm);
             const formObject = {};
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 formObject[key] = value;
             });
             
-            // Log form data to console (for demonstration)
+            // Log form data to console 
             console.log('Form submitted:', formObject);
             
             // Show success modal

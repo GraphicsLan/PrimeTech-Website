@@ -39,11 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 formObject[key] = value;
             });
             
-            // Log form data to console (for demonstration)
-            console.log('Contact form submitted:', formObject);
-            
-            // Here you would typically send the data to a server
-            // For demonstration, we'll just show the success modal
             
             // Show success modal
             contactSuccessModal.style.display = 'flex';
