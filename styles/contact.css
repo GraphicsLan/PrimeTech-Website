@@ -278,7 +278,7 @@
     padding: 150px 0 40px;
   }
   .contact-hero h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     padding-top: 40px;
   }
   .contact-hero p {
@@ -319,7 +319,7 @@
     padding: 120px 0 20px;
   }
   .contact-hero h1 {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
   }
   .contact-hero p {
     font-size: 0.95rem;
@@ -367,7 +367,7 @@
 
 @media (max-width: 576px) {
   .contact-hero h1 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .contact-form {
     padding: 5px;
