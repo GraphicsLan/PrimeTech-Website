@@ -286,6 +286,7 @@
   }
   .contact-main {
     padding: 40px 0;
+    overflow-x: hidden;
   }
   .contact-grid {
     grid-template-columns: 1fr;
@@ -296,6 +297,8 @@
   }
   .contact-form {
     padding: 20px;
+    align-content: center;
+    overflow-x: hidden;
   }
   .faq-question {
     padding: 12px;
@@ -303,13 +306,15 @@
   }
   .faq-section {
     padding: 40px 0;
+    overflow-x: hidden;
   }
   .location-map {
     padding: 40px 0;
+    overflow-x: hidden;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .contact-hero {
     padding: 120px 0 20px;
   }
@@ -360,7 +365,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 576px) {
   .contact-hero h1 {
     font-size: 1rem;
   }
