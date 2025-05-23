@@ -557,7 +557,7 @@ footer {
         display: none;
         flex-direction: column;
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
     
     nav ul.show {
@@ -619,5 +619,6 @@ footer {
     
     .footer-content {
         grid-template-columns: 1fr;
+        text-align: left;
     }
 }
