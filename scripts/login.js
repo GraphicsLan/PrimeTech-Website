@@ -32,23 +32,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('signupForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = {
-            fullName: document.getElementById('fullName').value,
-            phoneNumber: document.getElementById('phoneNumber').value,
-            email: document.getElementById('signupEmail').value,
-            gender: document.getElementById('gender').value,
-            nationality: document.getElementById('nationality').value,
-            password: document.getElementById('signupPassword').value
-        };
-        
-        // Validate passwords match
-        if (formData.password !== document.getElementById('confirmPassword').value) {
+        // Check password strength before submission
+        const strength = checkPasswordStrength();
+        if (strength === "Weak") {
+            e.preventDefault();
+            alert("Please choose a stronger password (at least 8 characters, with uppercase, lowercase, number, and special character).");
+            document.getElementById('signupPassword').focus();
+            return;
+        }
+
+        // Validate passwords match if not rejects
+        const password = document.getElementById('signupPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        if (password !== confirmPassword) {
+            e.preventDefault();
             alert('Passwords do not match!');
             return;
         }
-        
-        // Show verification modal (simulating email verification)
+
+        // If password is strong and matches, show verification modal
+        e.preventDefault(); 
         showVerificationModal();
     });
 });
@@ -99,3 +102,29 @@ function loginWithGithub() {
 function loginWithFacebook() {
     alert('Sorry! login using facebook account will be implemented soon, Please sign up /log in with email and password');
 }
+
+// Password strength checker
+function checkPasswordStrength() {
+    const password = document.getElementById('signupPassword').value;
+    let strength = 0;
+    if (password.length >= 8) strength++;
+    if (/[a-z]/.test(password)) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/\d/.test(password)) strength++;
+    if (/[\W_]/.test(password)) strength++;
+
+    let feedback = "Weak";
+    if (strength >= 5) feedback = "Strong";
+    else if (strength >= 3) feedback = "Medium";
+
+    document.getElementById('password-strength').textContent = feedback;
+    document.getElementById('password-strength').style.color =
+        feedback === "Strong" ? "green" : feedback === "Medium" ? "orange" : "red";
+    return feedback;
+}
+
+// forgot password option
+function forgotPassword() {
+    alert("Password reset instructions will be sent to your email (feature coming soon).");
+}
+//to add reset logic here 

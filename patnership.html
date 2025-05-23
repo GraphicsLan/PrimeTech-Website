@@ -278,5 +278,21 @@
         </div>
     </div>
     <script src="scripts/patnership.js"></script>
+        <!--Back to top button-->
+    <button id="backToTop" title="Go to top">&#8679;</button>
+
+    <!--scripts-->
+    <script src="scripts/patnership.js"></script>
+    <script>
+      window.onscroll = function () {
+        document.getElementById("backToTop").style.display =
+          document.body.scrollTop > 200 || document.documentElement.scrollTop > 200
+            ? "block"
+            : "none";
+      };
+      document.getElementById("backToTop").onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* Root Variables */
+
 :root {
   --primary-color: #191224;
   --secondary-color: #F7941D;
@@ -8,7 +8,7 @@
   --transition: 0.3s;
 }
 
-/* General Styles */
+
 body {
   background: var(--light-color);
   font-family: 'Poppins', Arial, sans-serif;
@@ -51,6 +51,7 @@ body {
   transition: background var(--transition), transform var(--transition);
   text-decoration: none;
   display: inline-block;
+  animation: pulse 1.5s infinite;
 }
 .courses-hero .btn:hover {
   background: var(--primary-color);
@@ -182,6 +183,7 @@ body {
   transition: background var(--transition), color var(--transition);
   text-align: center;
   width: 100%;
+  animation: pulse 1.5s infinite;
 }
 .btn-outline:hover {
   background: var(--secondary-color);

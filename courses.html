@@ -207,15 +207,16 @@
                     <h3>Course Information</h3>
                     <div class="form-group">
                         <label for="selectedCourse">Selected Course*</label>
-                        <input type="text" id="selectedCourse" name="selectedCourse" required readonly>
+                        <input type="text" id="selectedCourse" name="selectedCourse" required readonly placeholder="Select a course above to apply">
                     </div>
                     <div class="form-group">
                         <label for="courseSchedule">Preferred Schedule*</label>
                         <select id="courseSchedule" name="courseSchedule" required>
                             <option value="">Select Schedule</option>
-                            <option value="weekday-morning">Weekday Morning (9am-12pm)</option>
-                            <option value="weekday-evening">Weekday Evening (6pm-9pm)</option>
-                            <option value="weekend">Weekend (10am-4pm)</option>
+                            <option value="weekday-morning">Sunday Evening(8:30 Pm-10:30 pm)</option>
+                            <option value="weekday-evening">Tuesday Evening (8:30 pm-10:30 pm)</option>
+                            <option value="weekend">Thursday Evening(8:30 Pm - 10:30 pm)</option>
+                            <option value="weekend">Friday Evening (8:30 Pm - 10:30 pm)</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -271,7 +272,7 @@
                         <p>The Web Development course transformed my career. I went from zero coding experience to building my first Website for my business!</p>
                     </div>
                     <div class="testimonial-author">
-                       <!-- <img src="student1.jpg" alt="Sarah Johnson">-->
+                       <!-- <img src="student1.jpg" >-->
                         <div>
                             <h4>Daniel Kim</h4>
                             <span>Web Development Student</span>
@@ -286,7 +287,7 @@
                         <p>I also had the opportunity to engage with like minded people .</p>    
                     </div>
                     <div class="testimonial-author">
-                       <!-- <img src="student2.jpg" alt="Michael Chen"> -->
+                       <!-- <img src="student2.jpg" > -->
                         <div>
                             <h4>Prudence Kirimi</h4>
                             <span>Data Science Student</span>
@@ -299,7 +300,7 @@
                         <p>The instructors were knowledgeable and supportive. The project-based learning approach helped me build a strong portfolio.</p>
                     </div>
                     <div class="testimonial-author">
-                      <!--  <img src="student3.jpg" alt="Amina Diallo">-->
+                      <!--  <img src="student3.jpg" >-->
                         <div>
                             <h4>Dan Kariuki</h4>
                             <span>Graphic Design Student</span>
@@ -316,7 +317,7 @@
             <p>Take the first step towards your future today. Our admissions team is ready to help you choose the perfect course.</p>
             <div class="cta-buttons">
                 <a href="#course-application" class="btn">Apply Now</a>
-                <a href="contact.html" class="btn-outline">Contact Advisor</a>
+                <a href="#"class="btn-outline"onclick="redirectToWhatsApp()">Contact Advisor</a>
             </div>
         </div>
     </section>
@@ -346,7 +347,7 @@
                         <a href="#"><i class="fab fa-x"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                       <!-- <a href="#"><i class="fab fa-youtube"></i></a>-->
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -366,7 +367,24 @@
             <button class="btn close-modal-btn">Close</button>
         </div>
     </div>
+        <!--Back to top button-->
+    <button id="backToTop" title="Go to top">&#8679;</button>
+
+    <!--scripts-->
+    <script src="scripts/patnership.js"></script>
+    <script>
+      window.onscroll = function () {
+        document.getElementById("backToTop").style.display =
+          document.body.scrollTop > 200 || document.documentElement.scrollTop > 200
+            ? "block"
+            : "none";
+      };
+      document.getElementById("backToTop").onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    </script>
     <script src="scripts/courses.js"></script>
     <script src="scripts/patnership.js"></script>
+    <script src="scripts/home.js"></script>
 </body>
 </html>
