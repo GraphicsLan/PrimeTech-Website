@@ -426,7 +426,7 @@ button.btn:hover,
 @media (max-width: 991px) {
   .footer-content {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.0rem;
     text-align: center;
   }
   .footer-section {
@@ -446,7 +446,7 @@ button.btn:hover,
     grid-template-columns: 1fr;
   }
   .container {
-    width: 98%;
+    width: 100%;
   }
   .course-details-header,
   .course-details-content {

@@ -49,6 +49,21 @@ body {
     height: auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+.btn-read-more {
+    display: inline-block;
+    background-color: #F7941D;
+    color: #f5f5f2;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: infinite Pulse 1.5s;
+}
+.btn-read-more:hover {
+    background-color: #F7941D;
+    transform: translateY(-2px);
+}
 
 /* Mission Vision Styling */
 .mission-vision-container {
@@ -269,7 +284,7 @@ img {
     }
 }
 
-.footer-section-contact a{
-    color:#F7941D
-    
+.footer-contact a{
+    color: #F7941D;
+
 }

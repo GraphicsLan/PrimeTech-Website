@@ -80,6 +80,8 @@ body {
     }
 }
 
+
+
 /*courses section*/
 .courses {
     text-align: center;
@@ -232,17 +234,7 @@ body {
     margin-bottom: 30px;
 }
 
-/*  Footer */
-footer {
-    background-color: #191224;
-    color: #fff;
-    padding: 150px 20px;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-}
+
 
 /*  Why Choose Us Section */
 :root {
@@ -362,7 +354,7 @@ footer {
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
-    background: rgba(25, 18, 36, 0.85);
+    background: #F7941D;
     border-radius: 50%;
     position: relative;
     z-index: 10;
@@ -472,3 +464,7 @@ footer {
     }
 }
 
+.footer-section a{
+    color: #F7941D;
+
+}
