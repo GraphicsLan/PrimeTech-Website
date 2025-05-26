@@ -30,7 +30,15 @@ body {
 }
 
 .story-text p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #f5f5f2;
+    letter-spacing: 0.01em;
+    text-align: left;
+    max-width: 700px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 0;
 }
 
 .story-image {
@@ -38,6 +46,8 @@ body {
     max-width: 550px;
     width: 100%;
     border-radius: 10px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Mission Vision Styling */
@@ -250,4 +260,16 @@ img {
     nav li {
         margin: 0.5rem 0;
     }
+
+    .story-text p {
+        font-size: 1.05rem;
+        text-align: left;
+        padding: 0 5px;
+        max-width: 100%;
+    }
+}
+
+.footer-section-contact a{
+    color:#F7941D
+    
 }

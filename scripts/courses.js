@@ -226,8 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 formObject[key] = value;
             });
             
-            // Log form data to console (for demonstration)
-            console.log('Course application submitted:', formObject);
+
             
             // Show success modal
             courseSuccessModal.style.display = 'flex';
@@ -262,4 +261,41 @@ document.addEventListener('DOMContentLoaded', function() {
         
         startDateInput.setAttribute('min', minDate);
     }
+
+    // Testimonial slider logic
+    const grid = document.querySelector('.testimonials-grid');
+    const cards = document.querySelectorAll('.testimonial-card');
+    const leftArrow = document.querySelector('.testimonials-arrow.left');
+    const rightArrow = document.querySelector('.testimonials-arrow.right');
+    let current = 0;
+    let interval;
+    let isPaused = false;
+
+    function showSlide(idx) {
+        current = (idx + cards.length) % cards.length;
+        grid.style.transform = `translateX(-${current * 100}%)`;
+        cards.forEach((card, i) => card.classList.toggle('active', i === current));
+    }
+
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
+
+    function startAutoSlide() {
+        interval = setInterval(() => {
+            if (!isPaused) nextSlide();
+        }, 4000);
+    }
+    function stopAutoSlide() { clearInterval(interval); }
+
+    // Arrow events
+    rightArrow.addEventListener('click', () => { nextSlide(); });
+    leftArrow.addEventListener('click', () => { prevSlide(); });
+
+    // Hover pause
+    grid.addEventListener('mouseenter', () => { isPaused = true; });
+    grid.addEventListener('mouseleave', () => { isPaused = false; });
+
+    // Init
+    showSlide(0);
+    startAutoSlide();
 });
