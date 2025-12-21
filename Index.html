@@ -114,6 +114,11 @@
                 <h3>Integrity & Transparency</h3>
                 <p>We uphold high ethical standards in every aspect of our operations.</p>
             </div>
+            <div class="reason-card" data-index="05">
+                <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                <h3>Self paced learning</h3>
+                <p>With our flexible learning approach, you can study at your own pace and convenience from our LMS system.</p>
+            </div>
         </div>
     </section>
 
@@ -176,57 +181,61 @@
     <!-- Popular Courses Section -->
     <section class="courses" aria-labelledby="courses-title">
         <h2 id="courses-title">Popular Courses</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="course-item">
-                    <img src="Photos/Ai image.jpeg" alt="Artificial Intelligence">
-                    <h4><strong>Artificial Intelligence</strong></h4>
-                    <p>
-                        Dive into the world of Artificial Intelligence with our <br>cutting-edge course!
-                        Learn machine learning, neural networks, and AI tools to build smart systems that think, predict, and automate.<br>
-                        <strong>
-                            Hands-on Projects<br>
-                            Industry-Ready Skills<br>
-                            Globally Recognized Certification<br>
-                            Enroll Now & Be the AI Innovator of Tomorrow!
-                        </strong>
-                    </p>
-                </div>
+        <div class="courses-row-wrap" aria-hidden="false">
+            <button class="courses-nav courses-prev" aria-label="Previous courses">‹</button>
+            <div class="courses-row" role="list" aria-label="Popular courses" tabindex="0">
+                <article class="course-card" role="listitem">
+                    <img src="Photos/Ai image.jpeg" alt="Artificial Intelligence" loading="lazy">
+                    <div class="card-body">
+                        <h4>Artificial Intelligence</h4>
+                        <p class="teaser">Hands-on projects and industry-ready skills to build AI systems.</p>
+                        <a href="courses.html" class="btn-enroll">View Course</a>
+                    </div>
+                </article>
+                <article class="course-card" role="listitem">
+                    <img src="Photos/google workspace.jpg" alt="Google Workspace" loading="lazy">
+                    <div class="card-body">
+                        <h4>Google Workspace</h4>
+                        <p class="teaser">Learn to use Google Workspace tools for productivity and collaboration.</p>
+                        <a href="courses.html" class="btn-enroll">View Course</a>
+                    </div>
+                </article>
+                <article class="course-card" role="listitem">
+                    <img src="Photos/webDevelopment.jpeg" alt="Web Development" loading="lazy">
+                    <div class="card-body">
+                        <h4>Web Development</h4>
+                        <p class="teaser">From HTML/CSS to modern JS frameworks — build real websites.</p>
+                        <a href="courses.html" class="btn-enroll">View Course</a>
+                    </div>
+                </article>
+                <article class="course-card" role="listitem">
+                    <img src="Photos/Data science image.jpeg" alt="Data Science" loading="lazy">
+                    <div class="card-body">
+                        <h4>Data Science</h4>
+                        <p class="teaser">Learn Python, ML and data tools to turn data into insights.</p>
+                        <a href="courses.html" class="btn-enroll">View Course</a>
+                    </div>
+                </article>
+                <article class="course-card" role="listitem">
+                    <img src="Photos/Python Programming.jpeg" alt="Python Programming" loading="lazy">
+                    <div class="card-body">
+                        <h4>Python Programming</h4>
+                        <p class="teaser">An introduction to Python programming and its wide range of applications.</p>
+                        <a href="courses.html" class="btn-enroll">View Course</a>
+                    </div>
+                </article>
+                
             </div>
-            <div class="col-md-4">
-                <div class="course-item">
-                    <img src="Photos/webDevelopment.jpeg" alt="Web Development">
-                    <h4><strong>Web Development</strong></h4>
-                    <p>
-                        Turn your ideas into stunning websites with our hands-on Web Development Course!<br>
-                        Learn HTML, CSS, JavaScript, and modern frameworks to create fast, responsive, and dynamic sites.<br>
-                        <strong>
-                            Zero to Hero in Weeks!<br>
-                            Certification Included<br>
-                            100% Practical, Job-Ready Skills.
-                        </strong>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="course-item">
-                    <img src="Photos/Data science image.jpeg" alt="Data science">
-                    <h4><strong>Data Science</strong></h4>
-                    <p>
-                        Turn raw data into game-changing insights with our<br> hands-on Data Science Course!<br>
-                        Master Python, machine learning, and AI to analyze<br> trends, predict outcomes, and drive smart decisions.<br>
-                        Perfect for beginners and career-changers—no prior experience needed!<br>
-                        <strong>
-                            Learn from Experts<br>
-                            Build Real-World Projects<br>
-                            Earn a Career-Boosting Certificate.
-                        </strong>
-                    </p>
-                </div>
-            </div>
+            <button class="courses-nav courses-next" aria-label="Next courses">›</button>
+            <!-- subtle edge fades -->
+            <span class="scroll-fade left" aria-hidden="true"></span>
+            <span class="scroll-fade right" aria-hidden="true"></span>
         </div>
-        <a href="courses.html" class="btn-view-courses">View All Courses</a>
-    </div>
+        <div class="courses-indicators" role="tablist" aria-label="Course indicators"></div>
+        <div class="text-center mt-4">
+            <a href="courses.html" class="btn-view-courses">View All Courses</a>
+        </div>
+    </section>
 
     <!-- Call to Action Section -->
     <div class="call-to-action">

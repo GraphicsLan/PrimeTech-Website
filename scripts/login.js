@@ -433,10 +433,11 @@ function togglePassword(id, icon) {
     icon.classList.toggle('fa-eye-slash');
 }
 
-function checkPasswordStrength() {
-    const password = document.getElementById('signupPassword').value;
-    const bar = document.querySelector('.strength-fill');
-    const text = document.getElementById('strengthText');
+function checkPasswordStrength(inputId = 'signupPassword', barSelector = '.strength-fill', textId = 'strengthText') {
+    const input = document.getElementById(inputId);
+    const password = input ? input.value : '';
+    const bar = document.querySelector(barSelector);
+    const text = document.getElementById(textId);
     // improved scoring: include extra weight for length and more descriptive states
     let score = 0;
     if (password.length >= 8) score++;
@@ -520,67 +521,62 @@ function resetFormErrors() {
     });
 }
 
-// Toast notification
+// Toast notification (safe — no-op if toast not present)
 function showToast(message, type = 'info') {
     const toast = document.getElementById('toast');
-    const messageEl = toast.querySelector('.toast-message');
-    
+    if (!toast) {
+        // Page doesn't include toast UI — fall back to console to aid debugging
+        console.warn(`[${type}] ${message}`);
+        return;
+    }
+    const messageEl = toast.querySelector('.toast-message') || toast;
     messageEl.textContent = message;
     toast.className = `toast show ${type}`;
-    
     // Auto hide
-    setTimeout(() => {
-        toast.classList.remove('show');
-    }, 5000);
+    setTimeout(() => { if (toast) toast.classList.remove('show'); }, 5000);
 }
 
-// Modal functions
+// Modal functions (guard existence)
 function showVerificationModal() {
-    document.getElementById('verificationModal').classList.add('show');
+    const modal = document.getElementById('verificationModal');
+    if (!modal) return;
+    modal.classList.add('show');
     document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
-    document.getElementById('verificationModal').classList.remove('show');
+    const modal = document.getElementById('verificationModal');
+    if (!modal) return;
+    modal.classList.remove('show');
     document.body.style.overflow = 'auto';
     switchToLogin();
 }
 
 function resendVerification() {
     showToast('Verification email resent! Check your inbox.', 'success');
-    
     // Close modal after 2 seconds
-    setTimeout(() => {
-        closeModal();
-    }, 2000);
+    setTimeout(() => { closeModal(); }, 2000);
 }
 
 // Social login (stubs)
-function loginWithGoogle() {
-    showToast('Google login will be available soon!', 'info');
+function loginWithGoogle() { showToast('Google login will be available soon!', 'info'); }
+function loginWithGithub() { showToast('GitHub login will be available soon!', 'info'); }
+
+
+
+// Close toast on click (guarded)
+const _toastClose = document.querySelector('.toast-close');
+if (_toastClose) {
+    _toastClose.addEventListener('click', function() {
+        const t = document.getElementById('toast');
+        if (t) t.classList.remove('show');
+    });
 }
 
-function loginWithGithub() {
-    showToast('GitHub login will be available soon!', 'info');
+// Close modal on background click (guarded)
+const _verificationModal = document.getElementById('verificationModal');
+if (_verificationModal) {
+    _verificationModal.addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
 }
-
-function forgotPassword() {
-    const email = prompt('Enter your email address to reset password:');
-    if (email) {
-        if (validateEmail(email)) {
-            showToast(`Password reset instructions sent to ${email}`, 'success');
-        } else {
-            showToast('Please enter a valid email address', 'error');
-        }
-    }
-}
-
-// Close toast on click
-document.querySelector('.toast-close').addEventListener('click', function() {
-    document.getElementById('toast').classList.remove('show');
-});
-
-// Close modal on background click
-document.getElementById('verificationModal').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-});

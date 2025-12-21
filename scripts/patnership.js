@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // toggle accessible state
             const expanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', String(!expanded));
+            // Move focus to the first navigation link when opened for accessibility
+            if (!expanded) {
+                const firstLink = navMenu.querySelector('a');
+                if (firstLink) firstLink.focus();
+            }
         });
     }
     
@@ -33,10 +38,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Close mobile menu if open
                 navMenu.classList.remove('show-mobile-menu');
+                // Ensure the mobile menu button reflects the closed state for accessibility
+                if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
             }
         });
     });
-    
+
+    // Close menu when clicking outside or pressing Escape for accessibility
+    document.addEventListener('click', function(e) {
+        if (!mobileMenuBtn || !navMenu) return;
+        const isOpen = navMenu.classList.contains('show-mobile-menu');
+        if (isOpen && !navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navMenu.classList.remove('show-mobile-menu');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.focus();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (!mobileMenuBtn || !navMenu) return;
+            if (navMenu.classList.contains('show-mobile-menu')) {
+                navMenu.classList.remove('show-mobile-menu');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.focus();
+            }
+        }
+    });
+
     // Form submission
     const partnerForm = document.getElementById('partnerForm');
     const successModal = document.getElementById('successModal');
@@ -53,8 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 formObject[key] = value;
             });
             
-            // Log form data to console 
-            console.log('Form submitted:', formObject);
+            // Form data ready to be submitted to server (send via fetch/XHR)
             
             // Show success modal if present
             if (successModal) {
