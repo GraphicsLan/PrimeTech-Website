@@ -21,28 +21,28 @@
     <header>
       <div class="container">
         <div class="logo">
-          <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo" /></a>
+          <a href="#"><img src="Photos/logo New.png" alt="PrimeTech Foundation Logo" /></a>
         </div>
-        <nav>
-          <ul>
+        <nav aria-label="Main Navigation">
+          <ul id="primary-navigation">
             <li><a href="Index.html">Home</a></li>
             <li><a href="about.html" class="active">About Us</a></li>
             <li><a href="courses.html">Explore Courses</a></li>
             <li><a href="patnership.html"> Partner with us</a></li>
             <li><a href="contact.html">Contact us</a></li>
             <li class="nav-item2">
-              <a class="btn-login" href="login.html">Login/Sign up</a>
+              <a class="btn-login" href="login.html">PrimeTech LMS</a>
             </li>
           </ul>
-          <div class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-          </div>
+          <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
         </nav>
       </div>
     </header>
 
     <!-- Our story section -->
-    <div class="our-story-container" data-aos="fade-right">
+      <div class="our-story-container our-story-bg" data-aos="fade-right">
       <div class="story-text">
         <h1>Our Story</h1>
         <p>
@@ -54,7 +54,8 @@
         </p>
         <a href="docs/PrimeTech Foundation Story.pdf" target="_blank" class="btn-read-more">Read More</a>
       </div>
-      <img src="Photos/about us.jpg" alt="Our Journey" class="story-image" />
+        <!-- Decorative background image; provide screen-reader text for context -->
+        <span class="sr-only">Our Journey</span>
     </div>
 
     <div class="mission-vision-container">
@@ -111,7 +112,7 @@
         <p>Instructor</p>
       </div>
             <div class="team-member" data-aos="fade-up" data-aos-delay="300">
-        <img src="Photos/seth.jpg" alt="Seth Omondi Otieno-Intructor" />
+            <img src="Photos/seth.jpg" alt="Seth Omondi Otieno - Instructor" />
         <h2>Seth Omondi</h2>
         <p>Instructor</p>
       </div>
@@ -127,16 +128,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About Primetech Foundation</h3>
-                    <p>To empower youths in slum areas with digital skills, fostering self-employment and reducing unemployment.</p>
+                      <h3>About PrimeTech Foundation</h3>
+                          <p>To empower youth in under-resourced areas with digital skills, fostering self-employment and reducing unemployment.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="Index.html">Home</a></li>
-                        <li><a href="patnership.html">Patner With Us</a></li>
+                            <li><a href="patnership.html">Partner With Us</a></li>
                         <li><a href="courses.html">Our Courses</a></li>
-                        <li><a href="login.html">Join us Today</a></li>
+                            <li><a href="login.html">Join Us Today</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -159,7 +160,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>©2025 Primetech Foundation. All rights reserved.</p>
+                <p>©2025 PrimeTech Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,149 +1,259 @@
+<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeTech Foundation </title>
-    <link rel ="icon"type="image/png" href="Photos/logo New.png">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/patnership.css">
+    <title>PrimeTech Foundation - Login/Signup page</title>
+    <link rel="icon" type="image/png" href="Photos/logo New.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="courses.html">Explore Courses</a></li>
-                    <li><a href="patnership.html" >Partner with us</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li class="nav-item2">
-                        <a class="btn-login" href="login.html">Login/Sign up</a>
-                    </li>
-                </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <div class="login-container">
-        <div class="forms-container">
-            <div class="greeting">
-                <h1><strong>Welcome to PrimeTech Foundation</strong></h1>
-                <p>Sign up or log in to start your journey with us!</p>
-            </div>
-
-            <div class="form-container login-form">
-                <h2>Login to Your Account</h2>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <input type="email" id="loginEmail" required >
-                        <label for="loginEmail">Email</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="loginPassword" required>
-                        <label for="loginPassword">Password</label>
-                        <i class="fas fa-eye toggle-password" onclick="togglePassword('loginPassword', this)"></i>
-                    </div>
-                    <div class="form-group" style="text-align:right; margin-bottom: 10px;">
-                        <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="social-login">
-                        <p>Or login with</p>
-                        <div class="social-icons">
-                            <div class="social-icon google" onclick="loginWithGoogle()">
-                                <i class="fab fa-google"></i>
-                            </div>
-                            <div class="social-icon github" onclick="loginWithGithub()">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="social-icon facebook" onclick="loginWithFacebook()">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="switch-form">Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
-                </form>
-            </div>
-
-            <div class="form-container signup-form hidden">
-                <h2>Create Your Account</h2>
-                <form id="signupForm">
-                    <div class="form-group">
-                        <input type="text" id="fullName" required>
-                        <label for="fullName">Full Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phoneNumber" required>
-                        <label for="phoneNumber">Phone Number</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="signupEmail" required>
-                        <label for="signupEmail">Email</label>
-                    </div>
-                    <div class="form-group">
-                        <select id="gender" required>
-                            <option value="" disabled selected></option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="prefer-not-to-say">Prefer not to say</option>
-                        </select>
-                        <label for="gender">Gender</label>
-                    </div>
-                    <div class="form-group">
-                        <select id="nationality" required>
-                            <option value="" disabled selected></option>
-                            
-                        </select>
-                        <label for="nationality">Nationality</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="signupPassword" required oninput="checkPasswordStrength()">
-                        <label for="signupPassword">Password</label>
-                        <span id="password-strength"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="confirmPassword" required>
-                        <label for="confirmPassword">Confirm Password</label>
-                    </div>
-                    <button type="submit" class="btn">Sign Up</button>
-                    <div class="social-login">
-                        <p>Or sign up with</p>
-                        <div class="social-icons">
-                            <div class="social-icon google" onclick="loginWithGoogle()">
-                                <i class="fab fa-google"></i>
-                            </div>
-                            <div class="social-icon github" onclick="loginWithGithub()">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="social-icon facebook" onclick="loginWithFacebook()">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="switch-form">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-                </form>
-            </div>
-        </div>
+    <!-- Background Container with Image -->
+    <div class="background-container">
+        <div class="gradient-overlay"></div>
+          <img src="Images/img 3.png" alt="Gradient Overlay" class="gradient-image">
     </div>
 
-    <div class="verification-modal hidden">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2>Email Verification</h2>
-            <p>A verification link has been sent to your email address. Please check your inbox and click on the link to verify your account.</p>
-            <button class="btn" onclick="closeModal()">OK</button>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <a href="index.html" class="logo">
+                <img src="Photos/logo New.png" alt="PrimeTech Foundation Logo">
+                <span class="logo-text">PrimeTech Foundation</span>
+            </a>
+        </header>
+
+        <!-- Forms Container -->
+        <div class="forms-container">
+            <!-- Welcome Message -->
+            <div class="welcome-section">
+                <h1>Welcome to <span class="highlight">PrimeTech Foundation</span></h1>
+                <p>Join thousands of learners shaping their tech future</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Expert-led courses</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Community support</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-certificate"></i>
+                        <span>Industry certification</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forms Wrapper -->
+            <div class="forms-wrapper">
+                <!-- Login Form -->
+                <div class="form-section login-section active">
+                    <div class="form-header">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to continue your journey</p>
+                    </div>
+                    
+                    <form id="loginForm" class="auth-form">
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" placeholder="Email address" required>
+                            <div class="error-message" id="loginEmailError"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('loginPassword', this)" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
+                            <div class="error-message" id="loginPasswordError"></div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox">
+                                <input type="checkbox" id="rememberMe">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-link" onclick="forgotPassword()">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Sign In</span>
+                            <div class="spinner"></div>
+                        </button>
+                        
+                        <div class="divider">
+                            <span>or continue with</span>
+                        </div>
+                        
+                        <div class="social-auth">
+                            <button type="button" class="social-btn google" onclick="loginWithGoogle()">
+                                <i class="fab fa-google"></i>
+                                <span>Google</span>
+                            </button>
+                            <button type="button" class="social-btn github" onclick="loginWithGithub()">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </button>
+                        </div>
+                        
+                        <p class="switch-text">
+                            Don't have an account? 
+                            <a href="#" onclick="switchToSignup()" class="switch-link">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="form-section signup-section">
+                    <div class="form-header">
+                        <h2>Create Account</h2>
+                        <p>Start your tech journey today</p>
+                    </div>
+                    
+                    <form id="signupForm" class="auth-form">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="fullName" placeholder="Full name" required>
+                            <div class="error-message" id="fullNameError"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="signupEmail" placeholder="Email address" required>
+                            <div class="error-message" id="signupEmailError"></div>
+                        </div>
+                        
+                        <div class="input-row">
+                            <div class="input-group">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <label for="nationality" class="field-label">Nationality</label>
+                                <!-- combobox-style searchable nationality input (uses datalist) -->
+                                <input type="search" id="nationalityInput" list="countryList" class="country-search" placeholder="Search country..." aria-controls="nationality" aria-label="Search country" autocomplete="off">
+                                <datalist id="countryList"></datalist>
+                                <span id="countrySearchStatus" class="sr-only" aria-live="polite" aria-atomic="true"></span>
+                                <!-- hidden select kept for compatibility with existing logic -->
+                                <select id="nationality" required onchange="updateCountryCode()" hidden>
+                                    <option value="">Select country</option>
+                                </select>
+                                <div class="error-message" id="countryError"></div>
+                            </div>
+                            
+                            <div class="input-group phone-group">
+
+                                <label for="phoneNumber" class="field-label">Phone number</label>
+                                <div class="phone-input-wrapper">
+                                    
+                                    <span class="country-code-inline country-code-display" id="countryCodeDisplay" aria-hidden="true">+</span>
+                                    <input type="tel" id="phoneNumber" placeholder="Phone number" required aria-label="Phone number">
+
+                                </div>
+                                <div class="error-message" id="phoneNumberError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="input-row">
+                            <div class="input-group">
+                                <i class="fas fa-venus-mars"></i>
+                                <select id="gender" required>
+                                    <option value="">Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signupPassword" placeholder="Create password" required 
+                                   oninput="checkPasswordStrength()">
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('signupPassword', this)" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
+                            <div class="password-strength" id="passwordStrength" role="status" aria-live="polite" aria-atomic="true">
+                                <div class="strength-bar">
+                                    <div class="strength-fill"></div>
+                                </div>
+                                <span class="strength-text">Password strength: <span id="strengthText" aria-hidden="false">Weak</span></span>
+                            </div>
+                            <div class="error-message" id="signupPasswordError"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                            <div class="error-message" id="confirmPasswordError"></div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox">
+                                <input type="checkbox" id="terms" required>
+                                <span>I agree to the <a href="#" class="terms-link">Terms & Conditions</a></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Create Account</span>
+                            <div class="spinner"></div>
+                        </button>
+                        
+                        <div class="divider">
+                            <span>or sign up with</span>
+                        </div>
+                        
+                        <div class="social-auth">
+                            <button type="button" class="social-btn google" onclick="loginWithGoogle()" aria-label="Sign in with Google">
+                                <i class="fab fa-google"></i>
+                                <span>Google</span>
+                            </button>
+                            <button type="button" class="social-btn github" onclick="loginWithGithub()" aria-label="Sign in with GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </button>
+                        </div>
+                        
+                        <p class="switch-text">
+                            Already have an account? 
+                            <a href="#" onclick="switchToLogin()" class="switch-link">Sign in</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-content">
+                <i class="fas fa-check-circle toast-icon success"></i>
+                <i class="fas fa-exclamation-circle toast-icon error"></i>
+                <i class="fas fa-info-circle toast-icon info"></i>
+                <span class="toast-message"></span>
+            </div>
+            <button class="toast-close" aria-label="Close notification">&times;</button>
+        </div>
+
+        <!-- Verification Modal -->
+        <div id="verificationModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fas fa-envelope-circle-check"></i>
+                    <h3>Verify Your Email</h3>
+                </div>
+                <p>We've sent a verification link to <span id="userEmail"></span>. Please check your inbox and click the link to activate your account.</p>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeModal()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="resendVerification()">
+                        <i class="fas fa-redo"></i>
+                        Resend Email
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="scripts/login.js"></script>
-    <script src="scripts/patnership.js"></script>
 </body>
 </html>

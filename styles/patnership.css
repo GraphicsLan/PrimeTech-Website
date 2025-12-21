@@ -28,6 +28,7 @@ body {
     padding: 0 15px;
 }
 
+
 h1, h2, h3, h4 {
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -151,24 +152,41 @@ nav ul li .btn-login:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(#191224, #f7941D);
     color: white;
     text-align: center;
-    padding: 250px 0px;
+    padding: 220px 0 140px;
     margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background image with a bottom->top gradient fade to keep text readable */
+.hero.hero-bg {
+    background-image: linear-gradient(to top, rgba(25,18,36,0.95) 0%, rgba(25,18,36,0.85) 25%, rgba(25,18,36,0.55) 45%, rgba(25,18,36,0.25) 65%, rgba(25,18,36,0) 95%), url('../Images/img%205.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 
 .hero h1 {
-    font-size: 4.5rem;
-    color: white;
+    font-size: 3.6rem;
+    color: #fff;
     margin-bottom: 1rem;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    padding: 20px;
+    padding: 0 18px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+/* Slightly darker CTA for contrast */
+.hero .btn {
+    background-color: var(--secondary-color);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 /* Benefits Section */
@@ -649,4 +667,46 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* screen-reader only helper */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Responsive hero tweaks */
+@media (max-width: 992px) {
+    .hero {
+        padding: 160px 0 80px;
+    }
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 0 60px;
+        background-position: center center;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    .hero .btn {
+        display: inline-block;
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
 }

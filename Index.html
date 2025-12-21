@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primetech Foundation</title>
+    <title>PrimeTech Foundation</title>
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/patnership.css">
     <link rel="icon" type="image/png" href="Photos/logo New.png">
@@ -15,61 +15,64 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
+                <a href="#"><img src="Photos/logo New.png" alt="PrimeTech Foundation Logo"></a>
+                <h1 class="visually-hidden">PrimeTech Foundation</h1>
             </div>
-            <nav>
-                <ul>
+            <nav aria-label="Main Navigation">
+                <ul id="primary-navigation">
                     <li><a href="Index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="courses.html">Explore Courses</a></li>
                     <li><a href="patnership.html">Partner with us</a></li>
                     <li><a href="contact.html">Contact us</a></li>
                     <li class="nav-item2">
-                        <a class="btn-login" href="login.html">Login/Sign up</a>
+                        <a class="btn-login" href="login.html">PrimeTech LMS</a>
                     </li>
                 </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </nav>
         </div>
     </header>
     <!-- Hero Section -->
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" role="region" aria-label="Hero carousel">
         <div class="carousel-inner">
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="control-next-icon"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <div class="hero-slide" style="background-image: url('Photos/lines of code.jpeg');">
-                    <div class="hero-content text-center text-white">
-                        <h1 class="display-4 fw-bold">PrimeTech Foundation</h1>
-                        <h2 class="display-4 fw-bold">Empowering Youth Through Technology</h2>
-                        <p class="lead">Join our free courses and build a career in tech</p>
+                <div class="hero-slide hero-slide--left" style="background-image: url('Images/img%204.png');">
+                    <div class="hero-content text-white">
+                        <h2 class="hero-title display-4 fw-bold">PrimeTech Foundation</h2>
+                        <h3 class="hero-sub fw-bold">Empowering Youth Through Technology</h3>
+                        <p class="hero-lead">Join our free courses and build a career in tech</p>
                         <a href="login.html" class="btn-click">Get Started</a>
                     </div>
                 </div>
             </div>
             <!-- Slide 2 -->
             <div class="carousel-item">
-                <div class="hero-slide" style="background-image: url('Photos/seo image.jpeg');">
-                    <div class="hero-content text-center text-white">
-                        <h1 class="display-4 fw-bold">Learn. Build. Grow.</h1>
-                        <p class="lead">Hands-on training with real-world projects</p>
+                <div class="hero-slide hero-slide--left" style="background-image: url('Images/img%206.png');">
+                    <div class="hero-content text-white">
+                        <h2 class="hero-title fw-bold">Learn. Build. Grow.</h2>
+                        <p class="hero-lead">Hands-on training with real-world projects</p>
                         <a href="about.html" class="btn-click">Learn More</a>
                     </div>
                 </div>
             </div>
             <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="hero-slide" style="background-image: url('Photos/hacker Image.jpeg');">
-                    <div class="hero-content text-center text-white">
-                        <h1 class="display-4 fw-bold">Your Tech Journey Starts Here</h1>
-                        <p class="lead">No experience needed.</p>
+            <div class="carousel-item"> 
+                <div class="hero-slide hero-slide--left" style="background-image: url('Images/img%201.png');">
+                    <div class="hero-content text-white">
+                        <h2 class="hero-title fw-bold">Your Tech Journey Starts Here</h2>
+                        <p class="hero-lead">No experience needed.</p>
                         <a href="courses.html" class="btn-click">Enroll Now</a>
                     </div>
                 </div>
@@ -77,11 +80,13 @@
         </div>
     </div>
 
+    <main>
+
     <!-- Why us section (Hero Page) -->
-    <section class="why-choose-us">
+    <section class="why-choose-us" aria-labelledby="why-choose-title">
         <div class="section-header">
-            <h2>Why Choose Us</h2>
-            <p>Here is what sets Primetech Foundation apart.</p>
+            <h2 id="why-choose-title">Why Choose Us</h2>
+            <p>Here is what sets PrimeTech Foundation apart.</p>
         </div>
         <div class="reasons">
             <div class="reason-card" data-index="01">
@@ -113,9 +118,9 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services container my-5">
+    <section class="services container my-5" aria-labelledby="services-title">
         <div class="section-header text-center">
-            <h2 class="fw-bold">Our Services</h2>
+            <h2 id="services-title" class="fw-bold">Our Services</h2>
             <p>We offer innovative digital services to empower schools, businesses, and communities.</p>
         </div>
         <div class="row g-4">
@@ -169,15 +174,15 @@
     </section>
 
     <!-- Popular Courses Section -->
-    <div class="courses">
-        <h2>Popular Courses</h2>
+    <section class="courses" aria-labelledby="courses-title">
+        <h2 id="courses-title">Popular Courses</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="course-item">
                     <img src="Photos/Ai image.jpeg" alt="Artificial Intelligence">
                     <h4><strong>Artificial Intelligence</strong></h4>
                     <p>
-                        Dive into the world of Artificial Intelligence with our <br>cutting-edge course!.
+                        Dive into the world of Artificial Intelligence with our <br>cutting-edge course!
                         Learn machine learning, neural networks, and AI tools to build smart systems that think, predict, and automate.<br>
                         <strong>
                             Hands-on Projects<br>
@@ -227,27 +232,29 @@
     <div class="call-to-action">
         <h3>Ready to Start Your Journey?</h3>
         <p>Join us today and become part of the change. We believe in your potential!</p>
-        <a href="login.html" class="btn-view-courses">Sign Up Now, change Your Future</a>
+        <a href="login.html" class="btn-view-courses">Sign Up Now and Change Your Future</a>
     </div>
+    
+    </main>
 
     <!-- Back to Top Arrow -->
-    <button id="backToTop" title="Go to top">&#8679;</button>
+    <button id="backToTop" title="Go to top" aria-label="Back to top">&#8679;</button>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About Primetech Foundation</h3>
-                    <p>To empower youths in slum areas with digital skills, fostering self-employment and reducing unemployment.</p>
+                    <h3>About PrimeTech Foundation</h3>
+                    <p>To empower youth in underserved areas with digital skills, fostering self-employment and reducing unemployment.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="about.html">Mor About Us</a></li>
-                        <li><a href="patnership.html">Patner With Us</a></li>
+                        <li><a href="about.html">More About Us</a></li>
+                        <li><a href="patnership.html">Partner With Us</a></li>
                         <li><a href="courses.html">Our Courses</a></li>
-                        <li><a href="login.html">Join us Today</a></li>
+                        <li><a href="login.html">Join Us Today</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -268,13 +275,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>©2025 Primetech Foundation. All rights reserved.</p>
+                <p>©2025 PrimeTech Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>
     <script src="scripts/patnership.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/home.js"></script>
+
 </body>
 </html>
 

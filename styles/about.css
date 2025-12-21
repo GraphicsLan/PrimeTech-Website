@@ -17,8 +17,32 @@ body {
 }
 
 .story-text {
-    flex: 1;
+    flex: 1 1 48%;
+    max-width: 620px;
     padding-right: 40px;
+}
+
+/* Background image with left-side gradient overlay to make text readable */
+.our-story-container.our-story-bg {
+    background-image: linear-gradient(90deg, rgba(25,18,36,0.95) 0%, rgba(25,18,36,0.90) 35%, rgba(25,18,36,0.55) 50%, rgba(25,18,36,0.15) 70%, rgba(25,18,36,0) 100%), url('../Photos/about%20us.jpg');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 160px 10%;
+    min-height: 420px;
+}
+
+/* Screen-reader only helper (ensures SR-only span is hidden visually) */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 .story-text h1 {
@@ -229,6 +253,31 @@ img {
     .story-text,
     .story-image,
     .mission,
+
+    /* Improve story layout on narrow screens */
+    .our-story-container.our-story-bg {
+        background-position: center top;
+        padding: 60px 6%;
+        min-height: 320px;
+    }
+
+    .story-text h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+
+    .story-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    .btn-read-more {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        margin-top: 16px;
+    }
     .vision {
         padding: 0;
     }
@@ -257,6 +306,19 @@ img {
         text-align: center;
     }
 
+    .our-story-container.our-story-bg {
+        background-position: center;
+        padding: 80px 6%;
+        background-size: cover;
+        min-height: 320px;
+    }
+
+    .story-text {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+
     .story-text {
         margin-bottom: 20px;
     }
@@ -281,6 +343,49 @@ img {
         text-align: left;
         padding: 0 5px;
         max-width: 100%;
+    }
+}
+
+/* Extra small devices: fine-tune spacing and sizes */
+@media (max-width: 480px) {
+    .our-story-container.our-story-bg {
+        padding: 40px 5%;
+        min-height: 260px;
+        background-position: center top;
+    }
+
+    .story-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .story-text p {
+        font-size: 0.95rem;
+    }
+
+    .btn-read-more {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    /* Mission / Vision stack neatly */
+    .mission, .vision {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    /* Team cards full-width */
+    .team-member {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .team-member img {
+        width: 96px;
+        height: 96px;
+        border-radius: 12px;
     }
 }
 

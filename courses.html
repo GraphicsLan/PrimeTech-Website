@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Courses | Primetech Foundation</title>
+    <title>Our Courses | PrimeTech Foundation</title>
     <link rel="stylesheet" href="styles/courses.css">
     <link rel="stylesheet" href="styles/patnership.css">
     <link rel ="icon"type="image/png" href="Photos/logo New.png">
@@ -13,30 +13,33 @@
    <header>
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
+                <a href="#"><img src="Photos/logo New.png" alt="PrimeTech Foundation Logo"></a>
             </div>
-            <nav>
-                <ul>
+            <nav aria-label="Main Navigation">
+                <ul id="primary-navigation">
                     <li><a href="Index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="courses.html"class="active">Explore Courses</a></li>
                     <li><a href="patnership.html"> Partner with us</a></li>
                     <li><a href="contact.html">Contact us</a></li>
                     <li class="nav-item2">
-                        <a class="btn-login" href="login.html">Login/Sign up</a>
+                        <a class="btn-login" href="login.html">PrimeTech LMS</a>
                     </li>
                 </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </nav>
         </div>
     </header>
-    <section class="courses-hero">
+    <section class="courses-hero hero-bg" aria-label="Courses hero">
+        <span class="sr-only">Courses and training opportunities at PrimeTech Foundation</span>
         <div class="container">
-            <h1>Empower Your Future with Our Courses</h1>
-            <p>Gain in-demand skills and knowledge through our comprehensive training programs designed for the digital age.</p>
-            <a href="#course-application" class="btn">Apply Now</a>
+            <div class="hero-content">
+                <h1>Empower Your Future with Our Courses</h1>
+                <p>Gain in-demand skills and knowledge through our comprehensive training programs designed for the digital age.</p>
+                <a href="#course-application" class="btn">Apply Now</a>
+            </div>
         </div>
     </section>
     <!-- Courses-->
@@ -113,8 +116,8 @@
                         <span class="category-badge">Technology</span>
                     </div>
                     <div class="course-info">
-                        <h3>Python Programing </h3>
-                        <p class="course-description">Learn introduction into python programming and unlock a wide range of python applications and fields.</p>
+                        <h3>Python Programming</h3>
+                        <p class="course-description">An introduction to Python programming and its wide range of applications.</p>
                         <div class="course-meta">
                             <span><i class="fas fa-clock"></i> 8 Weeks</span>
                             <span><i class="fas fa-user-graduate"></i> Beginner</span>
@@ -253,7 +256,7 @@
                     <label>
                         <input type="checkbox" name="agreeTerms" required>
                         <P>I agree to the <a href="#">Terms and Conditions</a> and understand that my data
-                         will be processed in accordance with Primetech Foundation's <a href="#">Privacy Policy</a>.</p>
+                         will be processed in accordance with PrimeTech Foundation's <a href="#">Privacy Policy</a>.</p>
                     </label>
                 </div>
 
@@ -271,10 +274,10 @@
                     <div class="testimonial-card">
                         <div class="testimonial-content">
                             <i class="fas fa-quote-left"></i>
-                            <p>Primetech Foundation transformed my life by offering free digital skills training .
-                                I explore web development, AI, blogging, and more through interactive live classes and practical projects.
-                             Despite limited prior access, I now gain real-world skills using just a phone/laptop. Highly recommend this 
-                             empowering community for anyone seeking relevant digital expertise. </p>
+                            <p>PrimeTech Foundation transformed my life by offering free digital skills training.
+                                I explored web development, AI, blogging, and more through interactive live classes and practical projects.
+                             Despite limited prior access, I have gained real-world skills using just a phone or laptop. Highly recommend this
+                             empowering community for anyone seeking relevant digital expertise.</p>
                         </div>
                         <div class="testimonial-details">
                            <img src="Photos/monicah.jpg" >
@@ -287,7 +290,7 @@
                     <div class="testimonial-card">
                         <div class="testimonial-content">
                             <i class="fas fa-quote-left"></i>
-                            <p>Being a student at primetech has been a life altering opportunity. I was blown away by the quality of the courses provided.
+                               <p>Being a student at PrimeTech has been a life-altering opportunity. I was blown away by the quality of the courses provided.
                                  The instructors are knowledgeable and engaging, and the material is presented in a clear and concise manner.
                                  I also had the opportunity to engage with like minded people and be exposed to a world full of possibilities.</p>    
                         </div>
@@ -302,9 +305,9 @@
                     <div class="testimonial-card">
                         <div class="testimonial-content">
                             <i class="fas fa-quote-left"></i>
-                            <p>Primetech Foundation has been transformative for my graphics and design career.<br> Through hands-on training and real projects,
+                            <p>PrimeTech Foundation has been transformative for my graphics and design career.<br> Through hands-on training and real projects,
                                  I've gained professional skills and<br> confidence. The supportive, knowledgeable instructors foster growth in creative tech.<br>
-                                I now feel ready for professional design work and highly recommend Primetech to<br> anyone seeking a strong tech and design foundation. 
+                                I now feel ready for professional design work and highly recommend PrimeTech to<br> anyone seeking a strong tech and design foundation. 
                                 It's an excellent <br>launchpad for creative futures.</p>
                         </div>
                         <div class="testimonial-details">
@@ -318,7 +321,7 @@
                                   <div class="testimonial-card">
                         <div class="testimonial-content">
                             <i class="fas fa-quote-left"></i>
-                            <p>Primetech's skilled instructors guided me through project-based learning, helping me develop a strong portfolio. 
+                            <p>PrimeTech's skilled instructors guided me through project-based learning, helping me develop a strong portfolio. 
                                 Their support and practical approach boosted <br>my confidence and skills effectively</p>
                         </div>
                         <div class="testimonial-details">

@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('show');
+            // Toggle the class that CSS uses to display the mobile menu
+            navMenu.classList.toggle('show-mobile-menu');
+            // toggle accessible state
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
         });
     }
     
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu if open
-                navMenu.classList.remove('show');
+                navMenu.classList.remove('show-mobile-menu');
             }
         });
     });
@@ -52,8 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Log form data to console 
             console.log('Form submitted:', formObject);
             
-            // Show success modal
-            successModal.style.display = 'flex';
+            // Show success modal if present
+            if (successModal) {
+                successModal.style.display = 'flex';
+            }
             
             // Reset form
             partnerForm.reset();
@@ -63,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal
     closeModalBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            successModal.style.display = 'none';
+            if (successModal) successModal.style.display = 'none';
         });
     });
     
     // Close modal when clicking outside
     window.addEventListener('click', function(e) {
-        if (e.target === successModal) {
+        if (successModal && e.target === successModal) {
             successModal.style.display = 'none';
         }
     });

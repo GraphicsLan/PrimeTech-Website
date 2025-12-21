@@ -31,8 +31,9 @@ document.getElementById("backToTop").onclick = function() {
 
 
 function  redirectToWhatsApp() {
-  const phone = "+254 725 023365"; 
-  const text = "Hello, how are you?"; 
+  const phoneRaw = "+254 725 023365"; // keep human readable format here
+  const phone = phoneRaw.replace(/\D/g, ''); // sanitize to digits only: 254725023365
+  const text = "Hello, how are you?";
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   const url = isMobile
     ? `https://wa.me/${phone}?text=${encodeURIComponent(text)}`

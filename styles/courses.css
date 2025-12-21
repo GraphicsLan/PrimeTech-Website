@@ -24,19 +24,49 @@ body {
 
 /* Hero Section */
 .courses-hero {
-  background-color: #191224;
   color: #fff;
-  padding: 250px 0px;
   text-align: center;
+  padding: 220px 0 140px;
+  position: relative;
+}
+.courses-hero.hero-bg {
+  /* left-to-right fade overlay so text sits on left and the image is visible on the right */
+  background-image: linear-gradient(to right, rgba(25,18,45,0.95) 0%, rgba(25,18,45,0.75) 30%, rgba(25,18,36,0.35) 55%, rgba(25,18,36,0) 100%), url('../Images/img%204.png');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.courses-hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.courses-hero .hero-content {
+  max-width: 620px;
+  margin-left: 6%;
+  text-align: left;
+}
+
+.courses-hero .hero-content h1 {
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 992px) {
+  .courses-hero .container { padding-left: 6%; padding-right: 6%; }
+  .courses-hero .hero-content { margin-left: 0; }
 }
 .courses-hero h1 {
   font-size: 4.5rem;
   margin-bottom: 1rem;
-  color:#F7941D
+  color:#F7941D;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
 .courses-hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.35);
 }
 .courses-hero .btn {
   background: var(--secondary-color);
@@ -56,6 +86,24 @@ body {
   background: var(--primary-color);
   color: #fff;
   transform: scale(1.05);
+}
+
+/* Responsive hero adjustments */
+@media (max-width: 992px) {
+  .courses-hero { padding: 160px 0 80px; }
+  .courses-hero h1 { font-size: 2.6rem; }
+}
+
+@media (max-width: 480px) {
+  .courses-hero { padding: 100px 0 60px; background-position: center center; }
+  .courses-hero h1 { font-size: 1.6rem; margin-bottom: 0.6rem; }
+  .courses-hero p { font-size: 0.95rem; }
+  .courses-hero .btn { padding: 10px 18px; font-size: 0.95rem; }
+}
+
+@media (max-width: 768px) {
+  .courses-hero .container { justify-content: center; }
+  .courses-hero .hero-content { text-align: center; max-width: 90%; }
 }
 
 /* Course Categories */

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partnernership | Primetech Foundation</title>
+    <title>Partnership | PrimeTech Foundation</title>
     <link rel="stylesheet" href="styles/patnership.css">
 
     <link rel="icon" type="image/png" href="Photos/logo New.png" />
@@ -12,30 +12,32 @@
 <body>
    <header>
         <div class="container">
-            <div class="logo">
-                <a href="#"><img src="Photos/logo New.png" alt="Primetech Foundation Logo"></a>
-            </div>
-            <nav>
-                <ul>
+                <div class="logo">
+                    <a href="#"><img src="Photos/logo New.png" alt="PrimeTech Foundation Logo"></a>
+                </div>
+                <nav aria-label="Main Navigation">
+                    <ul id="primary-navigation">
                     <li><a href="Index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="courses.html">Explore Courses</a></li>
                     <li><a href="patnership.html" class="active">Partner with us</a></li>
                     <li><a href="contact.html">Contact us</a></li>
                     <li class="nav-item2">
-                        <a class="btn-login" href="login.html">Login/Sign up</a>
+                            <a class="btn-login" href="login.html">PrimeTech LMS</a>
                     </li>
                 </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
+                    <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-bg" aria-label="Partnership hero">
+        
+        <span class="sr-only">Partnerships: community engagement and collaboration</span>
         <div class="container">
-            <h1>Join Hands With Primetech Foundation</h1>
+                <h1>Join Hands With PrimeTech Foundation</h1>
             <p>Together, we can create lasting impact and drive positive change in our communities.</p>
             <a href="#partnership-form" class="btn">Become a Partner Today</a>
         </div>
@@ -75,7 +77,7 @@
             <div class="conditions-content">
                 <p>Before applying to become a partner, please review our partnership conditions:</p>
                 <ol>
-                    <li>Partners must align with Primetech Foundation's mission and values.</li>
+                        <li>Partners must align with PrimeTech Foundation's mission and values.</li>
                     <li>Financial commitments must be fulfilled as agreed in the partnership terms.</li>
                     <li>Partners are expected to maintain ethical business practices.</li>
                     <li>Brand usage guidelines must be followed when referencing the partnership.</li>
@@ -103,7 +105,7 @@
                   <!--  <img src="activity2.jpg" -->
                     <div class="activity-info">
                         <h3>Educational Training</h3>
-                        <p>Offered training to 100+ Youths.</p>
+                            <p>Offered training to 100+ youth.</p>
                         <span class="date">May 2025</span>
                     </div>
                 </div>
@@ -111,7 +113,7 @@
                  <!--   <img src="activity3.jpg" -->
                     <div class="activity-info">
                         <h3>Career Mentorship Program</h3>
-                        <p>Mentored 50+ highschool students with industry profession career guidance.</p>
+                            <p>Mentored 50+ high school students with industry career guidance.</p>
                         <span class="date">March 2025</span>
                     </div>
                 </div>
@@ -236,16 +238,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About Primetech Foundation</h3>
+                        <h3>About PrimeTech Foundation</h3>
                     <p>To empower youths in slum areas with digital skills, fostering self-employment and reducing unemployment.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="Index.html">Home</a></li>
-                        <li><a href="about.html">more about us</a></li>
+                            <li><a href="about.html">More About Us</a></li>
                         <li><a href="courses.html">Our Courses</a></li>
-                        <li><a href="login.html">Join us Today</a></li>
+                            <li><a href="login.html">Join Us Today</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -266,7 +268,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>©2025 Primetech Foundation. All rights reserved.</p>
+                    <p>©2025 PrimeTech Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -276,7 +278,7 @@
             <span class="close-modal">&times;</span>
             <i class="fas fa-check-circle"></i>
             <h2>Thank You!</h2>
-            <p>Thank you for reaching to us. Your partnership application has been submitted successfully.</p>
+            <p>Thank you for reaching out to us. Your partnership application has been submitted successfully.</p>
             <p>Our team will review your information and get back to you within 5 business days.</p>
             <button class="btn close-modal-btn">Close</button>
         </div>
