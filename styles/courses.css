@@ -668,4 +668,18 @@ button.btn:hover,
     .testimonial-details span {
         font-size: 0.9rem;
     }
+}/* Mobile overrides: hero background behavior */
+@media (max-width: 768px) {
+  .courses-hero.hero-bg {
+    background-size: cover;
+    background-position: center center;
+    animation: none;
+  }
+}
+@media (max-width: 480px) {
+  .courses-hero.hero-bg {
+    background-size: cover;
+    background-position: center center;
+    animation: none;
+  }
 }
