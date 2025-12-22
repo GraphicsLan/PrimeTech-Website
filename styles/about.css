@@ -30,7 +30,9 @@ body {
     background-repeat: no-repeat;
     padding: 160px 10%;
     min-height: 420px;
+    animation: heroZoom 12s ease-in-out forwards;
 }
+
 
 /* Screen-reader only helper (ensures SR-only span is hidden visually) */
 .sr-only {

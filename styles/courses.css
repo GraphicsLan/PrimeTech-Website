@@ -23,18 +23,30 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 .courses-hero {
   color: #fff;
   text-align: center;
   padding: 220px 0 140px;
   position: relative;
+  overflow: hidden;
 }
+
 .courses-hero.hero-bg {
-  /* left-to-right fade overlay so text sits on left and the image is visible on the right */
   background-image: linear-gradient(to right, rgba(25,18,45,0.95) 0%, rgba(25,18,45,0.75) 30%, rgba(25,18,36,0.35) 55%, rgba(25,18,36,0) 100%), url('../Images/img%204.png');
-  background-size: cover;
+  background-size: 140%;
   background-position: right center;
   background-repeat: no-repeat;
+  animation: heroZoom 12s ease-in-out forwards;
+}
+
+@keyframes heroZoom {
+  from {
+    background-size: 140%;
+  }
+  to {
+    background-size: 150%;
+  }
 }
 
 .courses-hero .container {
@@ -51,23 +63,50 @@ body {
 
 .courses-hero .hero-content h1 {
   margin-bottom: 0.6rem;
+  overflow: hidden;
+  border-right: 3px solid var(--secondary-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(60, end), blink-caret 0.75s step-end infinite;
 }
 
-@media (max-width: 992px) {
-  .courses-hero .container { padding-left: 6%; padding-right: 6%; }
-  .courses-hero .hero-content { margin-left: 0; }
+/* Typewriter animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--secondary-color); }
+}
+
 .courses-hero h1 {
   font-size: 4.5rem;
   margin-bottom: 1rem;
-  color:#F7941D;
+  color: #F7941D;
   text-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
+
 .courses-hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   text-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 3.8s;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .courses-hero .btn {
   background: var(--secondary-color);
   color: #fff;
@@ -80,30 +119,90 @@ body {
   transition: background var(--transition), transform var(--transition);
   text-decoration: none;
   display: inline-block;
-  animation: pulse 1.5s infinite;
+  animation: pulse 1.5s infinite, fadeInUp 1s ease forwards 4.2s;
+  opacity: 0;
 }
+
 .courses-hero .btn:hover {
   background: var(--primary-color);
   color: #fff;
   transform: scale(1.05);
 }
 
-/* Responsive hero adjustments */
 @media (max-width: 992px) {
-  .courses-hero { padding: 160px 0 80px; }
-  .courses-hero h1 { font-size: 2.6rem; }
-}
-
-@media (max-width: 480px) {
-  .courses-hero { padding: 100px 0 60px; background-position: center center; }
-  .courses-hero h1 { font-size: 1.6rem; margin-bottom: 0.6rem; }
-  .courses-hero p { font-size: 0.95rem; }
-  .courses-hero .btn { padding: 10px 18px; font-size: 0.95rem; }
+  .courses-hero .container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  
+  .courses-hero .hero-content {
+    margin-left: 0;
+  }
+  
+  .courses-hero {
+    padding: 160px 0 80px;
+  }
+  
+  .courses-hero h1 {
+    font-size: 2.6rem;
+    animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  .courses-hero p {
+    font-size: 1rem;
+    animation: fadeInUp 1s ease forwards 2.8s;
+  }
+  
+  .courses-hero .btn {
+    animation: pulse 1.5s infinite, fadeInUp 1s ease forwards 3.2s;
+  }
 }
 
 @media (max-width: 768px) {
-  .courses-hero .container { justify-content: center; }
-  .courses-hero .hero-content { text-align: center; max-width: 90%; }
+  .courses-hero .container {
+    justify-content: center;
+  }
+  
+  .courses-hero .hero-content {
+    text-align: center;
+    max-width: 90%;
+  }
+  
+  .courses-hero h1 {
+    font-size: 2rem;
+    animation: typing 2s steps(25, end), blink-caret 0.75s step-end infinite;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+  
+  .courses-hero p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-hero {
+    padding: 100px 0 60px;
+    background-position: center center;
+  }
+  
+  .courses-hero h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+  
+  .courses-hero p {
+    font-size: 0.95rem;
+  }
+  
+  .courses-hero .btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
 }
 
 /* Course Categories */

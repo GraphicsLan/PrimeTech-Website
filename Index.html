@@ -6,6 +6,7 @@
     <title>PrimeTech Foundation</title>
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/patnership.css">
+    <link rel="stylesheet" href="styles/animation.css">
     <link rel="icon" type="image/png" href="Photos/logo New.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -35,49 +36,100 @@
             </nav>
         </div>
     </header>
+
     <!-- Hero Section -->
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" role="region" aria-label="Hero carousel">
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" role="region" aria-label="Hero carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
         <div class="carousel-inner">
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
             <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="hero-slide hero-slide--left" style="background-image: url('Images/img%204.png');">
-                    <div class="hero-content text-white">
-                        <h2 class="hero-title display-4 fw-bold">PrimeTech Foundation</h2>
-                        <h3 class="hero-sub fw-bold">Empowering Youth Through Technology</h3>
-                        <p class="hero-lead">Join our free courses and build a career in tech</p>
-                        <a href="login.html" class="btn-click">Get Started</a>
+            <div class="carousel-item active" data-bs-interval="5000">
+                <div class="hero-slide hero-slide--left">
+                    <div class="hero-image-container">
+                        <img src="Images/img 4.png" 
+                             alt="PrimeTech Foundation empowering youth through technology"
+                             class="animate-zoom-in"
+                             loading="eager">
+                    </div>
+                    <div class="hero-content">
+                        <h2 class="hero-title animate-fade-in-up">
+                            PrimeTech Foundation
+                        </h2>
+                        <h3 class="hero-sub animate-fade-in-up animate-delay-200">
+                            Empowering Youth Through Technology
+                        </h3>
+                        <p class="hero-lead animate-fade-in-up animate-delay-300">
+                            Join our free courses and build a career in tech with hands-on projects
+                        </p>
+                        <a href="login.html" class="btn-click animate-fade-in-up animate-delay-400">
+                            Start Your Journey <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+            
             <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="hero-slide hero-slide--left" style="background-image: url('Images/img%206.png');">
-                    <div class="hero-content text-white">
-                        <h2 class="hero-title fw-bold">Learn. Build. Grow.</h2>
-                        <p class="hero-lead">Hands-on training with real-world projects</p>
-                        <a href="about.html" class="btn-click">Learn More</a>
+            <div class="carousel-item" data-bs-interval="5000">
+                <div class="hero-slide hero-slide--right">
+                    <div class="hero-image-container">
+                        <img src="Images/img 6.png" 
+                             alt="Hands-on tech training with real-world projects"
+                             class="animate-zoom-in"
+                             loading="lazy">
+                    </div>
+                    <div class="hero-content">
+                        <h2 class="hero-title animate-fade-in-up">
+                            Learn. Build. Grow.
+                        </h2>
+                        <p class="hero-lead animate-fade-in-up animate-delay-200">
+                            Hands-on training with industry experts and real-world projects
+                        </p>
+                        <a href="about.html" class="btn-click animate-fade-in-up animate-delay-300">
+                            Discover More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+            
             <!-- Slide 3 -->
-            <div class="carousel-item"> 
-                <div class="hero-slide hero-slide--left" style="background-image: url('Images/img%201.png');">
-                    <div class="hero-content text-white">
-                        <h2 class="hero-title fw-bold">Your Tech Journey Starts Here</h2>
-                        <p class="hero-lead">No experience needed.</p>
-                        <a href="courses.html" class="btn-click">Enroll Now</a>
+            <div class="carousel-item" data-bs-interval="5000">
+                <div class="hero-slide hero-slide--center">
+                    <div class="hero-image-container">
+                        <img src="Images/img 1.png" 
+                             alt="Start your tech journey today - no experience needed"
+                             class="animate-zoom-in"
+                             loading="lazy">
+                    </div>
+                    <div class="hero-content">
+                        <h2 class="hero-title animate-fade-in-up">
+                            Your Tech Journey Starts Here
+                        </h2>
+                        <p class="hero-lead animate-fade-in-up animate-delay-200">
+                            No experience needed. Start from scratch and build in-demand skills
+                        </p>
+                        <a href="courses.html" class="btn-click animate-pulse animate-delay-300">
+                            Enroll Now <i class="fas fa-rocket ml-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
     <main>
@@ -288,6 +340,79 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation classes to hero content when slide changes
+            const heroCarousel = document.getElementById('heroCarousel');
+            if (heroCarousel) {
+                heroCarousel.addEventListener('slide.bs.carousel', function(event) {
+                    const activeSlide = event.relatedTarget;
+                    const heroContent = activeSlide.querySelector('.hero-content');
+                    
+                    // Reset animations
+                    heroContent.style.opacity = '0';
+                    heroContent.style.transform = 'translateY(20px)';
+                    
+                    // Trigger reflow
+                    void heroContent.offsetWidth;
+                    
+                    // Add animation
+                    setTimeout(() => {
+                        heroContent.style.opacity = '1';
+                        heroContent.style.transform = 'translateY(0)';
+                    }, 100);
+                });
+            }
+            
+            // Parallax effect for hero images
+            function updateParallax() {
+                const scrollY = window.scrollY;
+                const parallaxImages = document.querySelectorAll('.parallax-image');
+                
+                parallaxImages.forEach(img => {
+                    img.style.setProperty('--scroll-parallax', scrollY / 1000);
+                });
+            }
+            
+            window.addEventListener('scroll', updateParallax);
+            updateParallax(); // Initial call
+            
+            // Animate elements on scroll
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const isVisible = rect.top <= window.innerHeight * 0.8;
+                    
+                    if (isVisible) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Initial call
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
     <script src="scripts/patnership.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/home.js"></script>
