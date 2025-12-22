@@ -39,7 +39,7 @@ const africanCountries = [
     { name: "Namibia", code: "+264", placeholder: "XX XXX XXXX" },
     { name: "Niger", code: "+227", placeholder: "XX XX XX XX" },
     { name: "Nigeria", code: "+234", placeholder: "XXX XXX XXXX" },
-    { name: "Rwanda", code: "+250", placeholder: "7XX XXX XXX" },
+    { name: "Rwanda", code: "+250", placeholder: "XXX XXX XXX" },
     { name: "Sao Tome and Principe", code: "+239", placeholder: "XX XXXXX" },
     { name: "Senegal", code: "+221", placeholder: "XX XXX XX XX" },
     { name: "Seychelles", code: "+248", placeholder: "X XXX XXX" },
