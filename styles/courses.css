@@ -23,7 +23,6 @@ body {
 }
 
 /* Hero Section */
-/* Hero Section */
 .courses-hero {
   color: #fff;
   text-align: center;
@@ -67,6 +66,7 @@ body {
   border-right: 3px solid var(--secondary-color);
   white-space: nowrap;
   margin: 0 auto;
+  padding-top: 20px;
   animation: typing 3.5s steps(60, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -86,6 +86,7 @@ body {
   margin-bottom: 1rem;
   color: #F7941D;
   text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  padding-top: 20px;
 }
 
 .courses-hero p {
@@ -146,6 +147,7 @@ body {
   .courses-hero h1 {
     font-size: 2.6rem;
     animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
+    padding-top: 20px;
   }
   
   .courses-hero p {
@@ -174,6 +176,7 @@ body {
     white-space: normal;
     border-right: none;
     animation: none;
+    padding-top: 20px;
   }
   
   .courses-hero p {
@@ -193,6 +196,7 @@ body {
     white-space: normal;
     border-right: none;
     animation: none;
+    padding-top: 60%;
   }
   
   .courses-hero p {
